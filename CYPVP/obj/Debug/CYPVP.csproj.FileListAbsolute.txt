@@ -1,0 +1,11 @@
+C:\Users\ZIVE\Can-you-pass-Visual-programming\CYPVP\bin\Debug\CYPVP.exe.config
+C:\Users\ZIVE\Can-you-pass-Visual-programming\CYPVP\bin\Debug\CYPVP.exe
+C:\Users\ZIVE\Can-you-pass-Visual-programming\CYPVP\bin\Debug\CYPVP.pdb
+C:\Users\ZIVE\Can-you-pass-Visual-programming\CYPVP\obj\Debug\CYPVP.csproj.AssemblyReference.cache
+C:\Users\ZIVE\Can-you-pass-Visual-programming\CYPVP\obj\Debug\CYPVP.csproj.SuggestedBindingRedirects.cache
+C:\Users\ZIVE\Can-you-pass-Visual-programming\CYPVP\obj\Debug\CYPVP.Form1.resources
+C:\Users\ZIVE\Can-you-pass-Visual-programming\CYPVP\obj\Debug\CYPVP.Properties.Resources.resources
+C:\Users\ZIVE\Can-you-pass-Visual-programming\CYPVP\obj\Debug\CYPVP.csproj.GenerateResource.cache
+C:\Users\ZIVE\Can-you-pass-Visual-programming\CYPVP\obj\Debug\CYPVP.csproj.CoreCompileInputs.cache
+C:\Users\ZIVE\Can-you-pass-Visual-programming\CYPVP\obj\Debug\CYPVP.exe
+C:\Users\ZIVE\Can-you-pass-Visual-programming\CYPVP\obj\Debug\CYPVP.pdb
