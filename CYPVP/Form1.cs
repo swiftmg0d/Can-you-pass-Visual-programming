@@ -6,16 +6,17 @@ using System.Drawing;
 using System.Linq;
 using System.Media;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CYPVP
 {
-    public partial class Form1 : Form
+    public partial class CYPVP : Form
     {
         public MainMenu Menu { get; set; }
        
-        public Form1()
+        public CYPVP()
         {
             InitializeComponent();
             Menu = new MainMenu();
@@ -49,6 +50,33 @@ namespace CYPVP
                 pb_muteSound.Image = Properties.Resources.unmute1;
                 Menu.IsMuted = false;
                 Menu.UnMute();
+            }
+        }
+
+        private void btn_help_Click(object sender, EventArgs e)
+        {
+            Help help = new Help();
+            help.StartPosition=FormStartPosition.Manual;
+            help.Location = this.Location;
+            this.Hide();
+            Menu.Stop();
+            if(help.ShowDialog() == DialogResult.Cancel) {
+                this.Show();
+                Menu.Play();
+            }
+        }
+
+        private void btn_start_Click(object sender, EventArgs e)
+        {
+            GameWindow gameWindow = new GameWindow();
+            gameWindow.StartPosition = FormStartPosition.Manual;
+            gameWindow.Location = this.Location;
+            this.Hide();
+            Menu.Stop();
+            if (gameWindow.ShowDialog() == DialogResult.Cancel)
+            {
+                this.Show();
+                Menu.Play();
             }
         }
     }

@@ -73,6 +73,46 @@ namespace CYPVP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap down_running {
+            get {
+                object obj = ResourceManager.GetObject("down_running", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap down_standing {
+            get {
+                object obj = ResourceManager.GetObject("down_standing", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap left_running {
+            get {
+                object obj = ResourceManager.GetObject("left_running", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap left_standing {
+            get {
+                object obj = ResourceManager.GetObject("left_standing", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap model1 {
             get {
                 object obj = ResourceManager.GetObject("model1", resourceCulture);
@@ -92,16 +132,6 @@ namespace CYPVP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap mute {
-            get {
-                object obj = ResourceManager.GetObject("mute", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap mute1 {
             get {
                 object obj = ResourceManager.GetObject("mute1", resourceCulture);
@@ -112,9 +142,19 @@ namespace CYPVP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap unmute {
+        internal static System.Drawing.Bitmap right_running {
             get {
-                object obj = ResourceManager.GetObject("unmute", resourceCulture);
+                object obj = ResourceManager.GetObject("right_running", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap right_standing {
+            get {
+                object obj = ResourceManager.GetObject("right_standing", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -125,6 +165,26 @@ namespace CYPVP.Properties {
         internal static System.Drawing.Bitmap unmute1 {
             get {
                 object obj = ResourceManager.GetObject("unmute1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap up_running {
+            get {
+                object obj = ResourceManager.GetObject("up_running", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap up_standing {
+            get {
+                object obj = ResourceManager.GetObject("up_standing", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

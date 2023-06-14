@@ -1,6 +1,6 @@
 ﻿namespace CYPVP
 {
-    partial class Form1
+    partial class CYPVP
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CYPVP));
             this.btn_quit = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_start = new System.Windows.Forms.Button();
+            this.btn_help = new System.Windows.Forms.Button();
             this.lb_title = new System.Windows.Forms.Label();
             this.lb_title1 = new System.Windows.Forms.Label();
             this.pb_menu = new System.Windows.Forms.PictureBox();
@@ -50,23 +51,25 @@
             this.btn_quit.UseVisualStyleBackColor = true;
             this.btn_quit.Click += new System.EventHandler(this.btn_quit_Click);
             // 
-            // button2
+            // btn_start
             // 
-            this.button2.Location = new System.Drawing.Point(330, 107);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(67, 32);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Start";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_start.Location = new System.Drawing.Point(330, 107);
+            this.btn_start.Name = "btn_start";
+            this.btn_start.Size = new System.Drawing.Size(67, 32);
+            this.btn_start.TabIndex = 1;
+            this.btn_start.Text = "Start";
+            this.btn_start.UseVisualStyleBackColor = true;
+            this.btn_start.Click += new System.EventHandler(this.btn_start_Click);
             // 
-            // button3
+            // btn_help
             // 
-            this.button3.Location = new System.Drawing.Point(330, 145);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(67, 37);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Options";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_help.Location = new System.Drawing.Point(330, 145);
+            this.btn_help.Name = "btn_help";
+            this.btn_help.Size = new System.Drawing.Size(67, 37);
+            this.btn_help.TabIndex = 2;
+            this.btn_help.Text = "Help";
+            this.btn_help.UseVisualStyleBackColor = true;
+            this.btn_help.Click += new System.EventHandler(this.btn_help_Click);
             // 
             // lb_title
             // 
@@ -120,7 +123,7 @@
             this.lb_version.TabIndex = 7;
             this.lb_version.Text = "v1.0";
             // 
-            // Form1
+            // CYPVP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -131,11 +134,14 @@
             this.Controls.Add(this.pb_menu);
             this.Controls.Add(this.lb_title1);
             this.Controls.Add(this.lb_title);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_help);
+            this.Controls.Add(this.btn_start);
             this.Controls.Add(this.btn_quit);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "CYPVP";
+            this.Text = "CYPVP";
             ((System.ComponentModel.ISupportInitialize)(this.pb_menu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_muteSound)).EndInit();
             this.ResumeLayout(false);
@@ -146,8 +152,8 @@
         #endregion
 
         private System.Windows.Forms.Button btn_quit;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_start;
+        private System.Windows.Forms.Button btn_help;
         private System.Windows.Forms.Label lb_title;
         private System.Windows.Forms.Label lb_title1;
         private System.Windows.Forms.PictureBox pb_menu;

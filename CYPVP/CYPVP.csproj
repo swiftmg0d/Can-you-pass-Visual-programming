@@ -53,11 +53,30 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Game.cs" />
+    <Compile Include="GameWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameWindow.Designer.cs">
+      <DependentUpon>GameWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help.Designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameWindow.resx">
+      <DependentUpon>GameWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help.resx">
+      <DependentUpon>Help.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -111,6 +130,75 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\Music\unmute1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\121313.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\standing_down-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ezgif.com-resize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ezgif.com-resize up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left_standing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right_standing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\player_movements\down\down_running.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\player_movements\down\down_standing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\player_movements\left\left_running.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\player_movements\left\left_standing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\player_movements\right\right_running.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\player_movements\right\right_standing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\player_movements\up\up_running.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\player_movements\up\up_standing.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
