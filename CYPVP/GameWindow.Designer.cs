@@ -43,9 +43,9 @@
             // Character
             // 
             this.Character.Image = ((System.Drawing.Image)(resources.GetObject("Character.Image")));
-            this.Character.Location = new System.Drawing.Point(386, 278);
+            this.Character.Location = new System.Drawing.Point(325, 263);
             this.Character.Name = "Character";
-            this.Character.Size = new System.Drawing.Size(100, 76);
+            this.Character.Size = new System.Drawing.Size(69, 69);
             this.Character.TabIndex = 0;
             this.Character.TabStop = false;
             // 
