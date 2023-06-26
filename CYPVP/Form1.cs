@@ -55,7 +55,7 @@ namespace CYPVP
 
         private void btn_help_Click(object sender, EventArgs e)
         {
-            Help help = new Help();
+            HelpWindow help = new HelpWindow();
             help.StartPosition=FormStartPosition.Manual;
             help.Location = this.Location;
             this.Hide();

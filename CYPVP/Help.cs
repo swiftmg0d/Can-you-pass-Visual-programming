@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -10,25 +8,69 @@ using System.Windows.Forms;
 
 namespace CYPVP
 {
-    public partial class Help : Form
+    public class Help
+
     {
-        public Help()
+
+        public bool CanMoveUp { get; set; }
+        public bool CanMoveDown { get; set; }
+        public bool CanMoveRight { get; set; }
+        public bool CanMoveLeft { get; set; }
+        public int NewPosition { get; set; }
+        public int Height { get; set; }
+        public int Width { get; set; }
+        public Help(int height, int width)
         {
-            InitializeComponent();
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox2.BackColor=Color.Transparent;
-            
+            CanMoveDown = false;
+            CanMoveLeft = false;
+            CanMoveRight = false;
+            CanMoveUp = false;
+            Height = height;
+            Width = width;
+        }
+        public void MoveCharachter(PictureBox Charachter, string Position, int Speed)
+        {
+            if (Position == "UP")
+            {
+                NewPosition = Charachter.Location.Y - Speed;
+                if (NewPosition >= 40)
+                {
+                    Charachter.Location = new Point(Charachter.Location.X, NewPosition);
+                }
+
+            }
+            else if (Position == "DOWN")
+            {
+                NewPosition = Charachter.Location.Y + Speed;
+                if (NewPosition < Height - 100)
+                {
+                    Charachter.Location = new Point(Charachter.Location.X, NewPosition);
+                }
+
+            }
+            else if (Position == "RIGHT")
+            {
+                NewPosition = Charachter.Location.X + Speed;
+                if (NewPosition < Width - 70)
+                {
+                    Charachter.Location = new Point(NewPosition, Charachter.Location.Y);
+                }
+
+            }
+            else if (Position == "LEFT")
+            {
+                NewPosition = Charachter.Location.X - Speed;
+                if (NewPosition >= 10)
+                {
+                    Charachter.Location = new Point(NewPosition, Charachter.Location.Y);
+
+                }
+            }
+        }
+        public bool Check()
+        {
+            return CanMoveDown == false && CanMoveUp == false && CanMoveLeft == false && CanMoveRight == false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            this.DialogResult = DialogResult.Cancel;
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
