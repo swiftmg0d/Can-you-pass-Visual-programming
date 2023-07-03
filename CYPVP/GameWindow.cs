@@ -7,21 +7,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace CYPVP
 {
     public partial class GameWindow : Form
     {
         private Game Game { get; set; }
+        public int Count { get; set; }
+        
 
         public GameWindow()
         {
             InitializeComponent();
-            Movements.Interval = 200;
-            Movements.Start();
+            CharacterMovements.Interval = 200;
+            CharacterMovements.Start();
+            SlimeMovements.Interval = 200;
+            SlimeMovements.Start();
+            TimeLeft.Interval = 22500;
+            TimeLeft.Start();
+            ScorePoints.Interval = 1000;
+            ScorePoints.Start();
             DoubleBuffered = true;
-            Game=new Game(this.Height,this.Width);
-            
+            Game=new Game(this.Height,this.Width,Character,Slime);
+            Count = 0;
         }
 
 
@@ -30,37 +39,45 @@ namespace CYPVP
         {
             if (e.KeyValue == (char)Keys.W)
             {
-                if (Game.CanMoveUp == false)
+                if (Game.MainCharacter.CanMoveUp == false)
                 {
-                    Character.Image = Properties.Resources.up_running;
+                    Game.MainCharacter.CharacterSkin.Image = Properties.Resources.up_running;
+                    Game.MainSlime.SlimeSkin.Image = Properties.Resources.slime_left;
+
                 }
-                Game.CanMoveUp = true;
+                Game.MainCharacter.CanMoveUp = true;
 
             }
             else if (e.KeyValue == (char)Keys.S)
             {
-                if (Game.CanMoveDown == false)
+                if (Game.MainCharacter.CanMoveDown == false)
                 {
-                    Character.Image = Properties.Resources.down_running;
+                    Game.MainCharacter.CharacterSkin.Image = Properties.Resources.down_running;
+                    Game.MainSlime.SlimeSkin.Image = Properties.Resources.slime_right;
+
                 }
-                Game.CanMoveDown = true;
+                Game.MainCharacter.CanMoveDown = true;
             }
             else if (e.KeyValue == (char)Keys.D)
             {
-                if (Game.CanMoveRight == false)
+                if (Game.MainCharacter.CanMoveRight == false)
                 {
-                    Character.Image = Properties.Resources.right_running;
+                    Game.MainCharacter.CharacterSkin.Image = Properties.Resources.right_running;
+                    Game.MainSlime.SlimeSkin.Image = Properties.Resources.slime_right;
+
                 }
-                Game.CanMoveRight = true;
+                Game.MainCharacter.CanMoveRight = true;
 
             }
             else if (e.KeyValue == (char)Keys.A)
             {
-                if (Game.CanMoveLeft == false)
+                if (Game.MainCharacter.CanMoveLeft == false)
                 {
-                    Character.Image = Properties.Resources.left_running;
+                    Game.MainCharacter.CharacterSkin.Image = Properties.Resources.left_running;
+                    Game.MainSlime.SlimeSkin.Image = Properties.Resources.slime_left;
+
                 }
-                Game.CanMoveLeft = true;
+                Game.MainCharacter.CanMoveLeft = true;
             }
         }
 
@@ -68,37 +85,40 @@ namespace CYPVP
         {
             if (e.KeyValue == (char)Keys.W)
             {
-                Game.CanMoveUp = false;
-                if (Game.Check())
+                Game.MainCharacter.CanMoveUp = false;
+                if (Game.MainCharacter.Check())
                 {
-                    Character.Image= Properties.Resources.up_standing;
+                    Game.MainCharacter.CharacterSkin.Image = Properties.Resources.up_standing;
+
                 }
-                
+
             }
             else if (e.KeyValue == (char)Keys.S)
             {
-                Game.CanMoveDown = false;
-                if (Game.Check())
+                Game.MainCharacter.CanMoveDown = false;
+                if (Game.MainCharacter.Check())
                 {
-                    Character.Image = Properties.Resources.down_standing;
+                    Game.MainCharacter.CharacterSkin.Image = Properties.Resources.down_standing;
+
                 }
-       
+
             }
             else if (e.KeyValue == (char)Keys.D)
             {
-                Game.CanMoveRight = false;
-                if (Game.Check())
+                Game.MainCharacter.CanMoveRight = false;
+                if (Game.MainCharacter.Check())
                 {
-                    Character.Image = Properties.Resources.right_standing;
+                    Game.MainCharacter.CharacterSkin.Image = Properties.Resources.right_standing;
 
                 }
             }
             else if (e.KeyValue == (char)Keys.A)
             {
-                Game.CanMoveLeft = false;
-                if (Game.Check())
+                Game.MainCharacter.CanMoveLeft = false;
+                if (Game.MainCharacter.Check())
                 {
-                    Character.Image = Properties.Resources.left_standing;
+
+                    Game.MainCharacter.CharacterSkin.Image = Properties.Resources.left_standing;
 
                 }
             }
@@ -107,28 +127,50 @@ namespace CYPVP
 
         private void Movements_Tick(object sender, EventArgs e)
         {
-            if (Game.CanMoveUp)
-            {
-                Game.MoveCharachter(Character, "UP",15);
-            }
-            else if (Game.CanMoveDown)
-            {
-                Game.MoveCharachter(Character, "DOWN",15);
-            }
-            else if (Game.CanMoveLeft)
-            {
-                Game.MoveCharachter(Character, "LEFT",15);
-            }
-            else if (Game.CanMoveRight)
-            {
-                Game.MoveCharachter(Character, "RIGHT",15);
-
-            }
+            Game.MoveCharacter(this.Height,this.Width);
+      
         }
 
-        private void GameWindow_Load(object sender, EventArgs e)
+        private void SlimeMovements_Tick(object sender, EventArgs e)
         {
+            Game.MoveSlime();
+        }
 
+        private void TimeLeft_Tick(object sender, EventArgs e)
+        {
+            Count++;
+            if(Count == 1) {
+                TimeLeftLabel.Image = Properties.Resources._2_statusbar;
+
+            }
+            else if(Count == 2) {
+                TimeLeftLabel.Image = Properties.Resources._3_statusbar;
+
+
+            }
+            else if(Count == 3) {
+                TimeLeftLabel.Image = Properties.Resources._4_statusbar;
+
+
+            }
+            else if(Count == 4)
+            {
+                TimeLeftLabel.Image = Properties.Resources._5_statusbar;
+
+            }
+
+
+
+
+        }
+
+        private void ScorePoints_Tick(object sender, EventArgs e)
+        {
+            if(Game.MainSlime.isCloseEnough)
+            {
+                Game.Score--;
+            }
+            label1.Text = $"Score: {Game.Score}";
         }
     }
 }
