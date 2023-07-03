@@ -123,6 +123,16 @@ namespace CYPVP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Btn01 {
+            get {
+                object obj = ResourceManager.GetObject("Btn01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap down_running {
             get {
                 object obj = ResourceManager.GetObject("down_running", resourceCulture);

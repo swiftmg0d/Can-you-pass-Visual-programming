@@ -42,6 +42,7 @@ namespace CYPVP
             {
                 MainCharacter.Move("RIGHT", 15, Height, Width, MainSlime.SlimeSkin.Location.X, MainSlime.SlimeSkin.Location.Y);
             }
+            
         }
 
         internal void MoveSlime()

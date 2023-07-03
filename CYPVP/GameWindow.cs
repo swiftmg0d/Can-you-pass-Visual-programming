@@ -31,6 +31,8 @@ namespace CYPVP
             DoubleBuffered = true;
             Game=new Game(this.Height,this.Width,Character,Slime);
             Count = 0;
+            label2.Text = $"TIMELEFT: {string.Format("{0:00}:{1:00}", Game.Time / 60, Game.Time % 60)}";
+
         }
 
 
@@ -166,11 +168,21 @@ namespace CYPVP
 
         private void ScorePoints_Tick(object sender, EventArgs e)
         {
+            if (Game.Time >= 0)
+            {
+                Game.Time--;
+            }
             if(Game.MainSlime.isCloseEnough)
             {
                 Game.Score--;
             }
-            label1.Text = $"Score: {Game.Score}";
+            label1.Text = $"POINTS: {Game.Score}";
+            label2.Text = $"TIMELEFT: {string.Format("{0:00}:{1:00}", Game.Time / 60, Game.Time % 60)}";
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
