@@ -22,7 +22,7 @@ namespace CYPVP.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace CYPVP.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("CYPVP.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace CYPVP.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,57 @@ namespace CYPVP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap background {
+        public static System.Drawing.Bitmap _1_statusbar {
+            get {
+                object obj = ResourceManager.GetObject("_1_statusbar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap _2_statusbar {
+            get {
+                object obj = ResourceManager.GetObject("_2_statusbar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap _3_statusbar {
+            get {
+                object obj = ResourceManager.GetObject("_3_statusbar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap _4_statusbar {
+            get {
+                object obj = ResourceManager.GetObject("_4_statusbar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap _5_statusbar {
+            get {
+                object obj = ResourceManager.GetObject("_5_statusbar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap background {
             get {
                 object obj = ResourceManager.GetObject("background", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -73,7 +123,7 @@ namespace CYPVP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap down_running {
+        public static System.Drawing.Bitmap down_running {
             get {
                 object obj = ResourceManager.GetObject("down_running", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -83,7 +133,7 @@ namespace CYPVP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap down_standing {
+        public static System.Drawing.Bitmap down_standing {
             get {
                 object obj = ResourceManager.GetObject("down_standing", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -93,7 +143,7 @@ namespace CYPVP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap left_running {
+        public static System.Drawing.Bitmap left_running {
             get {
                 object obj = ResourceManager.GetObject("left_running", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -103,7 +153,7 @@ namespace CYPVP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap left_standing {
+        public static System.Drawing.Bitmap left_standing {
             get {
                 object obj = ResourceManager.GetObject("left_standing", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -113,7 +163,7 @@ namespace CYPVP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap model1 {
+        public static System.Drawing.Bitmap model1 {
             get {
                 object obj = ResourceManager.GetObject("model1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -123,7 +173,7 @@ namespace CYPVP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream music_zapsplat_astro_race {
+        public static System.IO.UnmanagedMemoryStream music_zapsplat_astro_race {
             get {
                 return ResourceManager.GetStream("music_zapsplat_astro_race", resourceCulture);
             }
@@ -132,7 +182,7 @@ namespace CYPVP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap mute1 {
+        public static System.Drawing.Bitmap mute1 {
             get {
                 object obj = ResourceManager.GetObject("mute1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -142,7 +192,7 @@ namespace CYPVP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap right_running {
+        public static System.Drawing.Bitmap right_running {
             get {
                 object obj = ResourceManager.GetObject("right_running", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -152,7 +202,7 @@ namespace CYPVP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap right_standing {
+        public static System.Drawing.Bitmap right_standing {
             get {
                 object obj = ResourceManager.GetObject("right_standing", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -162,7 +212,27 @@ namespace CYPVP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap unmute1 {
+        public static System.Drawing.Bitmap slime_left {
+            get {
+                object obj = ResourceManager.GetObject("slime_left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap slime_right {
+            get {
+                object obj = ResourceManager.GetObject("slime_right", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap unmute1 {
             get {
                 object obj = ResourceManager.GetObject("unmute1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -172,7 +242,7 @@ namespace CYPVP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap up_running {
+        public static System.Drawing.Bitmap up_running {
             get {
                 object obj = ResourceManager.GetObject("up_running", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -182,7 +252,7 @@ namespace CYPVP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap up_standing {
+        public static System.Drawing.Bitmap up_standing {
             get {
                 object obj = ResourceManager.GetObject("up_standing", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));

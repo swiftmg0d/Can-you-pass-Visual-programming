@@ -9,63 +9,44 @@ namespace CYPVP
 {
     public class Game
     {
-        public bool CanMoveUp { get; set; }
-        public bool CanMoveDown { get; set; }
-        public bool CanMoveRight { get; set; }
-        public bool CanMoveLeft { get; set; }
-        public int NewPosition { get; set; }
-        public int Height { get; set; }
-        public int Width { get; set; }
-        public Game(int height,int width) { 
-            CanMoveDown = false;
-            CanMoveLeft = false;
-            CanMoveRight=false;
-            CanMoveUp = false;
-            Height=height;
-            Width=width;
+        public Character MainCharacter { get; set; }
+
+        public  Slime MainSlime { get; set; }
+        public int Score { get; set; }
+        public int Time { get; set; }
+
+
+
+        public Game(int height,int width,PictureBox mainCharacter,PictureBox mainSlime) {
+            MainCharacter = new Character(mainCharacter);
+            MainSlime=new Slime(mainSlime);
+            Time = 90;
+            Score = 0;
         }
-        public void MoveCharachter(PictureBox Charachter,string Position,int Speed)
+
+        internal void MoveCharacter(int Height,int Width)
         {
-            if (Position == "UP")
+            if (MainCharacter.CanMoveUp)
             {
-                NewPosition = Charachter.Location.Y - Speed;
-                if (NewPosition >= 40)
-                {
-                    Charachter.Location = new Point(Charachter.Location.X, NewPosition);
-                }
-
+                MainCharacter.Move("UP", 15, Height, Width,MainSlime.SlimeSkin.Location.X, MainSlime.SlimeSkin.Location.Y);
             }
-            else if(Position == "DOWN")
+            else if (MainCharacter.CanMoveDown)
             {
-                NewPosition = Charachter.Location.Y + Speed;
-                if (NewPosition < Height-100)
-                {
-                    Charachter.Location = new Point(Charachter.Location.X, NewPosition);
-                }
-               
+                MainCharacter.Move("DOWN", 15, Height, Width, MainSlime.SlimeSkin.Location.X, MainSlime.SlimeSkin.Location.Y);
             }
-            else if(Position == "RIGHT")
+            else if (MainCharacter.CanMoveLeft)
             {
-                NewPosition = Charachter.Location.X + Speed;
-                if(NewPosition < Width-70)
-                {
-                    Charachter.Location = new Point(NewPosition, Charachter.Location.Y);
-                }
-
+                MainCharacter.Move("LEFT", 15, Height, Width, MainSlime.SlimeSkin.Location.X, MainSlime.SlimeSkin.Location.Y);
             }
-            else if(Position == "LEFT")
+            else if (MainCharacter.CanMoveRight)
             {
-                NewPosition = Charachter.Location.X - Speed;
-                if (NewPosition >= 10)
-                {
-                    Charachter.Location = new Point(NewPosition, Charachter.Location.Y);
-
-                }
+                MainCharacter.Move("RIGHT", 15, Height, Width, MainSlime.SlimeSkin.Location.X, MainSlime.SlimeSkin.Location.Y);
             }
         }
-        public bool Check()
+
+        internal void MoveSlime()
         {
-            return CanMoveDown == false && CanMoveUp == false && CanMoveLeft == false && CanMoveRight == false;
+            MainSlime.Move((int)MainCharacter.CharacterSkin.Location.X, (int)MainCharacter.CharacterSkin.Location.Y);
         }
     }
 }
