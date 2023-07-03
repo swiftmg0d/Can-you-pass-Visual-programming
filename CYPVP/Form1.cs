@@ -61,8 +61,9 @@ namespace CYPVP
             this.Hide();
             Menu.Stop();
             if(help.ShowDialog() == DialogResult.Cancel) {
-                this.Show();
-                Menu.Play();
+                this.Show(); 
+                //Menu.Play();
+
             }
         }
 
@@ -76,7 +77,7 @@ namespace CYPVP
             if (gameWindow.ShowDialog() == DialogResult.Cancel)
             {
                 this.Show();
-                Menu.Play();
+                //Menu.Play();
             }
         }
     }

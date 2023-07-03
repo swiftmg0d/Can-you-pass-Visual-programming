@@ -13,40 +13,22 @@ namespace CYPVP
     public partial class HelpWindow : Form
     {
         private Help Help { get; set; }
-       
+
 
         public HelpWindow()
         {
             InitializeComponent();
             Character.BackColor = Color.Transparent;
-            textLabel.BackColor = Color.Transparent;
-            MovmentsTick.Interval = 200;
-            MovmentsTick.Start();
-            DoubleBuffered = true;
+            lbl_heading.BackColor = Color.Transparent;
+            lbl_control.BackColor = Color.Transparent;
+            lbl_instruction.BackColor=Color.Transparent;
+            lbl_instruction1.BackColor = Color.Transparent;    
             Help = new Help(this.Height, this.Width);
-
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            this.DialogResult = DialogResult.Cancel;
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void HelpWindow_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void HelpWindow_KeyDown(object sender, KeyEventArgs e)
         {
 
-            if (e.KeyValue==(char)Keys.W)
+            if (e.KeyValue == (char)Keys.W)
             {
                 if (Help.CanMoveUp == false)
                 {
@@ -85,9 +67,9 @@ namespace CYPVP
         private void HelpWindow_KeyUp(object sender, KeyEventArgs e)
         {
 
-            if (e.KeyValue==(char)Keys.W)
+            if (e.KeyValue == (char)Keys.W)
             {
-                Help.CanMoveUp=false;
+                Help.CanMoveUp = false;
                 if (Help.Check())
                 {
                     Character.Image = Properties.Resources.up_standing;
@@ -125,43 +107,6 @@ namespace CYPVP
 
         }
 
-        private void MovmentsTick_Tick(object sender, EventArgs e)
-        {
-            if (Help.CanMoveUp)
-            {
-                Help.MoveCharachter(Character, "UP", 15);
-            }
-            else if (Help.CanMoveDown)
-            {
-                Help.MoveCharachter(Character, "DOWN", 15);
-            }
-            else if (Help.CanMoveLeft)
-            {
-                Help.MoveCharachter(Character, "LEFT", 15);
-            }
-            else if (Help.CanMoveRight)
-            {
-                Help.MoveCharachter(Character, "RIGHT", 15);
-
-            }
-
-        }
-
-       
-
-        private void Character_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lb_title1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Character_Click_1(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

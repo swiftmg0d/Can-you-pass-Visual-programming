@@ -117,78 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="MovmentsTick.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="textLabel.Text" xml:space="preserve">
-    <value>"Welcome to the game! To control your character's movement,
- use the following keyboard keys:
-Press the W key to move up.
-Press the S key to move down.
-Press the D key to move right.
-Press the A key to move left.
-By using these keys, you can navigate your character and explore the game world. 
-Be careful and reach the goal of the game. Good luck!"
-</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Character.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-        TkSuQmCC
-</value>
-  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAAMoAAAEAIABoQQMAFgAAACgAAAAAAQAAlAEAAAEAIAAAAAAAACgDAMMOAADDDgAAAAAAAAAA

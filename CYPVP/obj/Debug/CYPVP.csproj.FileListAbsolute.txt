@@ -9,7 +9,6 @@ C:\Users\ZIVE\Can-you-pass-Visual-programming\CYPVP\obj\Debug\CYPVP.csproj.CoreC
 C:\Users\ZIVE\Can-you-pass-Visual-programming\CYPVP\obj\Debug\CYPVP.exe
 C:\Users\ZIVE\Can-you-pass-Visual-programming\CYPVP\obj\Debug\CYPVP.pdb
 C:\Users\ZIVE\Can-you-pass-Visual-programming\CYPVP\obj\Debug\CYPVP.CYPVP.resources
-C:\Users\ZIVE\Can-you-pass-Visual-programming\CYPVP\obj\Debug\CYPVP.Help.resources
 C:\Users\ZIVE\Can-you-pass-Visual-programming\CYPVP\obj\Debug\CYPVP.GameWindow.resources
 C:\Users\Lenovo\Desktop\Can-you-pass-Visual-programming\CYPVP\bin\Debug\CYPVP.exe.config
 C:\Users\Lenovo\Desktop\Can-you-pass-Visual-programming\CYPVP\bin\Debug\CYPVP.exe
@@ -24,3 +23,4 @@ C:\Users\Lenovo\Desktop\Can-you-pass-Visual-programming\CYPVP\obj\Debug\CYPVP.cs
 C:\Users\Lenovo\Desktop\Can-you-pass-Visual-programming\CYPVP\obj\Debug\CYPVP.exe
 C:\Users\Lenovo\Desktop\Can-you-pass-Visual-programming\CYPVP\obj\Debug\CYPVP.pdb
 C:\Users\Lenovo\Desktop\Can-you-pass-Visual-programming\CYPVP\obj\Debug\CYPVP.HelpWindow.resources
+C:\Users\ZIVE\Can-you-pass-Visual-programming\CYPVP\obj\Debug\CYPVP.HelpWindow.resources
