@@ -60,11 +60,12 @@
     <Compile Include="GameWindow.Designer.cs">
       <DependentUpon>GameWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Help.cs">
+    <Compile Include="Help.cs" />
+    <Compile Include="HelpWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Help.Designer.cs">
-      <DependentUpon>Help.cs</DependentUpon>
+    <Compile Include="HelpWindow.Designer.cs">
+      <DependentUpon>HelpWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="MainMenu.cs" />
     <Compile Include="Program.cs" />
@@ -75,8 +76,8 @@
     <EmbeddedResource Include="GameWindow.resx">
       <DependentUpon>GameWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Help.resx">
-      <DependentUpon>Help.cs</DependentUpon>
+    <EmbeddedResource Include="HelpWindow.resx">
+      <DependentUpon>HelpWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

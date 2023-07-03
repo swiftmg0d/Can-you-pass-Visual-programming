@@ -43,23 +43,26 @@
             // Character
             // 
             this.Character.Image = ((System.Drawing.Image)(resources.GetObject("Character.Image")));
-            this.Character.Location = new System.Drawing.Point(325, 263);
+            this.Character.Location = new System.Drawing.Point(488, 405);
+            this.Character.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Character.Name = "Character";
-            this.Character.Size = new System.Drawing.Size(69, 69);
+            this.Character.Size = new System.Drawing.Size(104, 106);
             this.Character.TabIndex = 0;
             this.Character.TabStop = false;
             // 
             // GameWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(1176, 863);
             this.Controls.Add(this.Character);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "GameWindow";
             this.Text = "CYPVP";
+            this.Load += new System.EventHandler(this.GameWindow_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GameWindow_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.GameWindow_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.Character)).EndInit();

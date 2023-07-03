@@ -71,7 +71,7 @@ namespace CYPVP
                 Game.CanMoveUp = false;
                 if (Game.Check())
                 {
-                    Character.Image = Properties.Resources.up_standing;
+                    Character.Image= Properties.Resources.up_standing;
                 }
                 
             }
@@ -126,8 +126,10 @@ namespace CYPVP
             }
         }
 
-       
+        private void GameWindow_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }
 
