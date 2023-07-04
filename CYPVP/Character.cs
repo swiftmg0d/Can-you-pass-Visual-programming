@@ -28,7 +28,7 @@ namespace CYPVP
                 if (Position == "UP")
                 {
                     int NewPosition = CharacterSkin.Location.Y - Speed;
-                    if (NewPosition >= 80d)
+                    if (NewPosition >= 80)
                     {
                     
                    

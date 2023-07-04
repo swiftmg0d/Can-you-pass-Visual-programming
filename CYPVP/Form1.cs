@@ -15,12 +15,14 @@ namespace CYPVP
     public partial class CYPVP : Form
     {
         public MainMenu Menu { get; set; }
-       
+        public static Random Random { get; set; }
+
         public CYPVP()
         {
             InitializeComponent();
             Menu = new MainMenu();
             LoadMenu();
+            Random=new Random();
         }
 
         private void LoadMenu()
@@ -80,5 +82,7 @@ namespace CYPVP
                 //Menu.Play();
             }
         }
+
+        
     }
 }

@@ -43,10 +43,9 @@
             // 
             // btn_quit
             // 
-            this.btn_quit.Location = new System.Drawing.Point(495, 289);
-            this.btn_quit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_quit.Location = new System.Drawing.Point(330, 188);
             this.btn_quit.Name = "btn_quit";
-            this.btn_quit.Size = new System.Drawing.Size(100, 51);
+            this.btn_quit.Size = new System.Drawing.Size(67, 33);
             this.btn_quit.TabIndex = 0;
             this.btn_quit.Text = "Quit";
             this.btn_quit.UseVisualStyleBackColor = true;
@@ -54,10 +53,9 @@
             // 
             // btn_start
             // 
-            this.btn_start.Location = new System.Drawing.Point(495, 165);
-            this.btn_start.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_start.Location = new System.Drawing.Point(330, 107);
             this.btn_start.Name = "btn_start";
-            this.btn_start.Size = new System.Drawing.Size(100, 49);
+            this.btn_start.Size = new System.Drawing.Size(67, 32);
             this.btn_start.TabIndex = 1;
             this.btn_start.Text = "Start";
             this.btn_start.UseVisualStyleBackColor = true;
@@ -65,10 +63,9 @@
             // 
             // btn_help
             // 
-            this.btn_help.Location = new System.Drawing.Point(495, 223);
-            this.btn_help.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_help.Location = new System.Drawing.Point(330, 145);
             this.btn_help.Name = "btn_help";
-            this.btn_help.Size = new System.Drawing.Size(100, 57);
+            this.btn_help.Size = new System.Drawing.Size(67, 37);
             this.btn_help.TabIndex = 2;
             this.btn_help.Text = "Help";
             this.btn_help.UseVisualStyleBackColor = true;
@@ -79,10 +76,9 @@
             this.lb_title.AutoSize = true;
             this.lb_title.Font = new System.Drawing.Font("Segoe Print", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_title.ForeColor = System.Drawing.Color.White;
-            this.lb_title.Location = new System.Drawing.Point(18, 14);
-            this.lb_title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_title.Location = new System.Drawing.Point(12, 9);
             this.lb_title.Name = "lb_title";
-            this.lb_title.Size = new System.Drawing.Size(298, 72);
+            this.lb_title.Size = new System.Drawing.Size(197, 47);
             this.lb_title.TabIndex = 3;
             this.lb_title.Text = "Can you pass";
             // 
@@ -91,30 +87,27 @@
             this.lb_title1.AutoSize = true;
             this.lb_title1.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_title1.ForeColor = System.Drawing.Color.White;
-            this.lb_title1.Location = new System.Drawing.Point(96, 85);
-            this.lb_title1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_title1.Location = new System.Drawing.Point(64, 55);
             this.lb_title1.Name = "lb_title1";
-            this.lb_title1.Size = new System.Drawing.Size(284, 46);
+            this.lb_title1.Size = new System.Drawing.Size(198, 31);
             this.lb_title1.TabIndex = 4;
             this.lb_title1.Text = "Visaul programming";
             // 
             // pb_menu
             // 
             this.pb_menu.Image = global::CYPVP.Properties.Resources.model1;
-            this.pb_menu.Location = new System.Drawing.Point(382, 78);
-            this.pb_menu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pb_menu.Location = new System.Drawing.Point(255, 51);
             this.pb_menu.Name = "pb_menu";
-            this.pb_menu.Size = new System.Drawing.Size(60, 54);
+            this.pb_menu.Size = new System.Drawing.Size(40, 35);
             this.pb_menu.TabIndex = 5;
             this.pb_menu.TabStop = false;
             // 
             // pb_muteSound
             // 
             this.pb_muteSound.Image = global::CYPVP.Properties.Resources.unmute1;
-            this.pb_muteSound.Location = new System.Drawing.Point(4, 508);
-            this.pb_muteSound.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pb_muteSound.Location = new System.Drawing.Point(3, 330);
             this.pb_muteSound.Name = "pb_muteSound";
-            this.pb_muteSound.Size = new System.Drawing.Size(84, 57);
+            this.pb_muteSound.Size = new System.Drawing.Size(56, 37);
             this.pb_muteSound.TabIndex = 6;
             this.pb_muteSound.TabStop = false;
             this.pb_muteSound.Click += new System.EventHandler(this.pb_muteSound_Click);
@@ -124,19 +117,18 @@
             this.lb_version.AutoSize = true;
             this.lb_version.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_version.ForeColor = System.Drawing.Color.White;
-            this.lb_version.Location = new System.Drawing.Point(544, 535);
-            this.lb_version.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_version.Location = new System.Drawing.Point(363, 348);
             this.lb_version.Name = "lb_version";
-            this.lb_version.Size = new System.Drawing.Size(50, 30);
+            this.lb_version.Size = new System.Drawing.Size(34, 19);
             this.lb_version.TabIndex = 7;
             this.lb_version.Text = "v1.0";
             // 
             // CYPVP
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::CYPVP.Properties.Resources.background;
-            this.ClientSize = new System.Drawing.Size(614, 569);
+            this.ClientSize = new System.Drawing.Size(409, 370);
             this.Controls.Add(this.lb_version);
             this.Controls.Add(this.pb_muteSound);
             this.Controls.Add(this.pb_menu);
@@ -146,12 +138,10 @@
             this.Controls.Add(this.btn_start);
             this.Controls.Add(this.btn_quit);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CYPVP";
             this.Text = "CYPVP";
-           // this.Load += new System.EventHandler(this.CYPVP_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_menu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_muteSound)).EndInit();
             this.ResumeLayout(false);

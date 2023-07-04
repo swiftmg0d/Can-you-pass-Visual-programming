@@ -72,6 +72,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Slime.cs" />
+    <Compile Include="Star.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -229,6 +230,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Btn01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star_preview_rev_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coin_collect.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oscillating-space-waves-31400.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

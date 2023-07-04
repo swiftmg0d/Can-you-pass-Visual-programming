@@ -33,19 +33,23 @@
             this.CharacterMovements = new System.Windows.Forms.Timer(this.components);
             this.SlimeMovements = new System.Windows.Forms.Timer(this.components);
             this.TimeLeft = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
+            this.lb_Points = new System.Windows.Forms.Label();
             this.ScorePoints = new System.Windows.Forms.Timer(this.components);
-            this.label2 = new System.Windows.Forms.Label();
+            this.lb_TimeLeft = new System.Windows.Forms.Label();
+            this.StarsSpawn = new System.Windows.Forms.Timer(this.components);
+            this.Hud1 = new System.Windows.Forms.PictureBox();
             this.TimeLeftLabel = new System.Windows.Forms.PictureBox();
             this.Slime = new System.Windows.Forms.PictureBox();
             this.Character = new System.Windows.Forms.PictureBox();
             this.Hud = new System.Windows.Forms.PictureBox();
-            this.Hud1 = new System.Windows.Forms.PictureBox();
+            this.lb_Tips_Heading = new System.Windows.Forms.Label();
+            this.lb_Heading_text = new System.Windows.Forms.Label();
+            this.TipsTimer = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.Hud1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TimeLeftLabel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Character)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Hud)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Hud1)).BeginInit();
             this.SuspendLayout();
             // 
             // CharacterMovements
@@ -60,32 +64,46 @@
             // 
             this.TimeLeft.Tick += new System.EventHandler(this.TimeLeft_Tick);
             // 
-            // label1
+            // lb_Points
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Algerian", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(411, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 18);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Points: 0";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lb_Points.AutoSize = true;
+            this.lb_Points.Font = new System.Drawing.Font("Algerian", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Points.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lb_Points.Location = new System.Drawing.Point(411, 22);
+            this.lb_Points.Name = "lb_Points";
+            this.lb_Points.Size = new System.Drawing.Size(86, 18);
+            this.lb_Points.TabIndex = 3;
+            this.lb_Points.Text = "Points: 0";
             // 
             // ScorePoints
             // 
             this.ScorePoints.Tick += new System.EventHandler(this.ScorePoints_Tick);
             // 
-            // label2
+            // lb_TimeLeft
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Algerian", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(22, 54);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 18);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "TIME LEFT:  0";
+            this.lb_TimeLeft.AutoSize = true;
+            this.lb_TimeLeft.Font = new System.Drawing.Font("Algerian", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_TimeLeft.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lb_TimeLeft.Location = new System.Drawing.Point(22, 54);
+            this.lb_TimeLeft.Name = "lb_TimeLeft";
+            this.lb_TimeLeft.Size = new System.Drawing.Size(119, 18);
+            this.lb_TimeLeft.TabIndex = 5;
+            this.lb_TimeLeft.Text = "TIME LEFT:  0";
+            // 
+            // StarsSpawn
+            // 
+            this.StarsSpawn.Interval = 5000;
+            this.StarsSpawn.Tick += new System.EventHandler(this.StarsSpawn_Tick);
+            // 
+            // Hud1
+            // 
+            this.Hud1.Image = global::CYPVP.Properties.Resources.Btn01;
+            this.Hud1.Location = new System.Drawing.Point(534, 7);
+            this.Hud1.Name = "Hud1";
+            this.Hud1.Size = new System.Drawing.Size(308, 65);
+            this.Hud1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Hud1.TabIndex = 6;
+            this.Hud1.TabStop = false;
             // 
             // TimeLeftLabel
             // 
@@ -100,7 +118,7 @@
             // Slime
             // 
             this.Slime.Image = global::CYPVP.Properties.Resources.slime_left;
-            this.Slime.Location = new System.Drawing.Point(25, 119);
+            this.Slime.Location = new System.Drawing.Point(481, 154);
             this.Slime.Name = "Slime";
             this.Slime.Size = new System.Drawing.Size(59, 60);
             this.Slime.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -110,7 +128,7 @@
             // Character
             // 
             this.Character.Image = global::CYPVP.Properties.Resources.down_standing;
-            this.Character.Location = new System.Drawing.Point(140, 122);
+            this.Character.Location = new System.Drawing.Point(199, 157);
             this.Character.Name = "Character";
             this.Character.Size = new System.Drawing.Size(45, 57);
             this.Character.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -127,15 +145,33 @@
             this.Hud.TabIndex = 4;
             this.Hud.TabStop = false;
             // 
-            // Hud1
+            // lb_Tips_Heading
             // 
-            this.Hud1.Image = global::CYPVP.Properties.Resources.Btn01;
-            this.Hud1.Location = new System.Drawing.Point(534, 7);
-            this.Hud1.Name = "Hud1";
-            this.Hud1.Size = new System.Drawing.Size(308, 65);
-            this.Hud1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Hud1.TabIndex = 6;
-            this.Hud1.TabStop = false;
+            this.lb_Tips_Heading.AutoSize = true;
+            this.lb_Tips_Heading.Font = new System.Drawing.Font("Algerian", 10F, System.Drawing.FontStyle.Bold);
+            this.lb_Tips_Heading.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lb_Tips_Heading.Location = new System.Drawing.Point(547, 22);
+            this.lb_Tips_Heading.Name = "lb_Tips_Heading";
+            this.lb_Tips_Heading.Size = new System.Drawing.Size(39, 15);
+            this.lb_Tips_Heading.TabIndex = 7;
+            this.lb_Tips_Heading.Text = "TIPS";
+            // 
+            // lb_Heading_text
+            // 
+            this.lb_Heading_text.AutoSize = true;
+            this.lb_Heading_text.Font = new System.Drawing.Font("Algerian", 9.6F, System.Drawing.FontStyle.Bold);
+            this.lb_Heading_text.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lb_Heading_text.Location = new System.Drawing.Point(592, 22);
+            this.lb_Heading_text.MaximumSize = new System.Drawing.Size(190, 0);
+            this.lb_Heading_text.Name = "lb_Heading_text";
+            this.lb_Heading_text.Size = new System.Drawing.Size(61, 15);
+            this.lb_Heading_text.TabIndex = 8;
+            this.lb_Heading_text.Text = "label1";
+            // 
+            // TipsTimer
+            // 
+            this.TipsTimer.Interval = 10000;
+            this.TipsTimer.Tick += new System.EventHandler(this.TipsTimer_Tick);
             // 
             // GameWindow
             // 
@@ -143,9 +179,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.lb_Heading_text);
+            this.Controls.Add(this.lb_Tips_Heading);
             this.Controls.Add(this.Hud1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lb_TimeLeft);
+            this.Controls.Add(this.lb_Points);
             this.Controls.Add(this.TimeLeftLabel);
             this.Controls.Add(this.Slime);
             this.Controls.Add(this.Character);
@@ -157,11 +195,11 @@
             this.Text = "CYPVP";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GameWindow_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.GameWindow_KeyUp);
+            ((System.ComponentModel.ISupportInitialize)(this.Hud1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TimeLeftLabel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Character)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Hud)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Hud1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,10 +212,14 @@
         private System.Windows.Forms.PictureBox Slime;
         private System.Windows.Forms.Timer TimeLeft;
         private System.Windows.Forms.PictureBox TimeLeftLabel;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lb_Points;
         private System.Windows.Forms.Timer ScorePoints;
         private System.Windows.Forms.PictureBox Hud;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lb_TimeLeft;
+        private System.Windows.Forms.Timer StarsSpawn;
         private System.Windows.Forms.PictureBox Hud1;
+        private System.Windows.Forms.Label lb_Tips_Heading;
+        private System.Windows.Forms.Label lb_Heading_text;
+        private System.Windows.Forms.Timer TipsTimer;
     }
 }
