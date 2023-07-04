@@ -14,13 +14,16 @@ namespace CYPVP
 {
     public partial class CYPVP : Form
     {
-        public MainMenu Menu { get; set; }
-       
+        public static MainMenu Menu { get; set; }
+        public static Random Random { get; set; }
+
         public CYPVP()
         {
             InitializeComponent();
             Menu = new MainMenu();
             LoadMenu();
+            Random=new Random();
+            
         }
 
         private void LoadMenu()
@@ -30,6 +33,7 @@ namespace CYPVP
             lb_version.BackColor = Color.Transparent;
             pb_menu.BackColor = Color.Transparent;
             pb_muteSound.BackColor=Color.Transparent;
+            Menu.Play();
         }
 
         private void btn_quit_Click(object sender, EventArgs e)
@@ -69,16 +73,28 @@ namespace CYPVP
 
         private void btn_start_Click(object sender, EventArgs e)
         {
-            GameWindow gameWindow = new GameWindow();
-            gameWindow.StartPosition = FormStartPosition.Manual;
-            gameWindow.Location = this.Location;
-            this.Hide();
-            Menu.Stop();
-            if (gameWindow.ShowDialog() == DialogResult.Cancel)
-            {
-                this.Show();
-                //Menu.Play();
-            }
+            
+                this.Hide();
+                Menu.Stop();
+                GameWindow GameWindow = new GameWindow();
+                GameWindow.StartPosition = FormStartPosition.Manual;
+                GameWindow.Location = this.Location;
+                if (GameWindow.ShowDialog() == DialogResult.Cancel)
+                {
+                    try
+                    {
+                        this.Show();
+                        GameWindow.Close();
+                    }
+                    catch { }
+                   
+                }
+            
+            
+            
+          
         }
+
+        
     }
 }

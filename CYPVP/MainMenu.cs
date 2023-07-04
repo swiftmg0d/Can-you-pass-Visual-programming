@@ -13,7 +13,7 @@ namespace CYPVP
         public bool IsMuted { get; set; }
         public MainMenu() { 
             MainMenuSoundPlayer=new SoundPlayer(Properties.Resources.music_zapsplat_astro_race);
-            VideoPlayerController.AudioManager.StepMasterVolume(20);
+            VideoPlayerController.AudioManager.StepMasterVolume(10);
            // MainMenuSoundPlayer.PlayLooping();
             VideoPlayerController.AudioManager.SetMasterVolumeMute(false);
             IsMuted = false;

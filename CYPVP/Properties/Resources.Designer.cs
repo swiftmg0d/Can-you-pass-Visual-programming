@@ -123,6 +123,25 @@ namespace CYPVP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Btn01 {
+            get {
+                object obj = ResourceManager.GetObject("Btn01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream coin_collect {
+            get {
+                return ResourceManager.GetStream("coin_collect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap down_running {
             get {
                 object obj = ResourceManager.GetObject("down_running", resourceCulture);
@@ -137,6 +156,15 @@ namespace CYPVP.Properties {
             get {
                 object obj = ResourceManager.GetObject("down_standing", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Epic_Fail_Sound_Effect {
+            get {
+                return ResourceManager.GetStream("Epic_Fail_Sound_Effect", resourceCulture);
             }
         }
         
@@ -220,11 +248,30 @@ namespace CYPVP.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream slime_radiation_sound {
+            get {
+                return ResourceManager.GetStream("slime_radiation_sound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap slime_right {
             get {
                 object obj = ResourceManager.GetObject("slime_right", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap star {
+            get {
+                object obj = ResourceManager.GetObject("star", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -256,6 +303,15 @@ namespace CYPVP.Properties {
             get {
                 object obj = ResourceManager.GetObject("up_standing", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Yayyy_Sound_Effect {
+            get {
+                return ResourceManager.GetStream("Yayyy_Sound_Effect", resourceCulture);
             }
         }
     }

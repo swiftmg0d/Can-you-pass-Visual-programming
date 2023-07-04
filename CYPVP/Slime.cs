@@ -22,7 +22,7 @@ namespace CYPVP
        
         }
 
-        public void Move(int x, int y)
+        public void Move(int x, int y,int speed)
         {
             if (Math.Abs(SlimeSkin.Location.X - x) < 56 && Math.Abs(SlimeSkin.Location.Y - y) < 56)
             {
@@ -31,23 +31,27 @@ namespace CYPVP
             else
             {
                 isCloseEnough=false;
-                if (SlimeSkin.Location.X + 2 < x)
+                if (SlimeSkin.Location.X + speed < x)
                 {
-                    SlimeSkin.Location = new Point(SlimeSkin.Location.X + 2, SlimeSkin.Location.Y);
+                    SlimeSkin.Location = new Point(SlimeSkin.Location.X + speed, SlimeSkin.Location.Y);
                 }
-                else if (SlimeSkin.Location.X - 2 > x)
+                else if (SlimeSkin.Location.X - speed > x)
                 {
-                    SlimeSkin.Location = new Point(SlimeSkin.Location.X - 2, SlimeSkin.Location.Y);
+                    SlimeSkin.Location = new Point(SlimeSkin.Location.X - speed, SlimeSkin.Location.Y);
 
                 }
-                if (SlimeSkin.Location.Y + 2 < y)
+                 if (SlimeSkin.Location.Y + speed < y)
                 {
-                    SlimeSkin.Location = new Point(SlimeSkin.Location.X, SlimeSkin.Location.Y + 2);
+                    SlimeSkin.Location = new Point(SlimeSkin.Location.X, SlimeSkin.Location.Y + speed);
                 }
-                else if (SlimeSkin.Location.Y - 2 > y)
+                else if (SlimeSkin.Location.Y - speed > y)
                 {
-                    SlimeSkin.Location = new Point(SlimeSkin.Location.X, SlimeSkin.Location.Y - 2);
+                    SlimeSkin.Location = new Point(SlimeSkin.Location.X, SlimeSkin.Location.Y - speed);
                 }
+                
+
+
+
             }
 
             
