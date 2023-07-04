@@ -11,11 +11,13 @@ namespace CYPVP
     {
         public PictureBox StarSkin { get; set; }
         public bool IsEaten { get; set; }
+        public bool isSelected { get; set; }
 
         public Star(PictureBox starSkin)
         {
             StarSkin = starSkin;
             IsEaten = false;
+            isSelected = false;
         }
     }
 }

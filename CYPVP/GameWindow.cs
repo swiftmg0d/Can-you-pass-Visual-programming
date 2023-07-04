@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Media;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -44,6 +45,17 @@ namespace CYPVP
             ScorePoints.Start();
             TipsTimer.Interval = 10000;
             TipsTimer.Start();
+            StarsFade.Interval = 12000;
+            StarsFade.Start();
+        }
+        private void StopGame()
+        {
+            StarsSpawn.Stop();
+            CharacterMovements.Stop();
+            SlimeMovements.Stop();
+            ScorePoints.Stop();
+            TipsTimer.Stop();
+            StarsFade.Stop();
         }
         private void UpdateTime()
         {
@@ -154,7 +166,6 @@ namespace CYPVP
             }
         }
 
-
         private void RemoveStars()
         {
            for(int i = Game.List0fStars.Count - 1; i >= 0; i--)
@@ -162,6 +173,10 @@ namespace CYPVP
                 if (Game.List0fStars[i].IsEaten)
                 {
                     Game.CollectCoinSound.Play();
+                    this.Controls.Remove(Game.List0fStars[i].StarSkin);
+                    Game.List0fStars.RemoveAt(i);
+                }else if (Game.List0fStars[i].isSelected && !Game.List0fStars[i].IsEaten)
+                {
                     this.Controls.Remove(Game.List0fStars[i].StarSkin);
                     Game.List0fStars.RemoveAt(i);
                 }
@@ -193,7 +208,7 @@ namespace CYPVP
             Count++;
             if(Count == 1) {
                 TimeLeftLabel.Image = Properties.Resources._2_statusbar;
-
+                
             }
             else if(Count == 2) {
                 TimeLeftLabel.Image = Properties.Resources._3_statusbar;
@@ -208,6 +223,11 @@ namespace CYPVP
             else if(Count == 4)
             {
                 TimeLeftLabel.Image = Properties.Resources._5_statusbar;
+                this.Hide();
+                StopGame();
+                TimeLeft.Stop();
+                EndGame endGame = new EndGame(Game.Score);
+                endGame.ShowDialog();
 
             }
 
@@ -245,11 +265,23 @@ namespace CYPVP
             PictureBox NewStar = MakeStar();
             Game.List0fStars.Add(new Star(NewStar));
             this.Controls.Add(NewStar);
+            
         }
 
         private void TipsTimer_Tick(object sender, EventArgs e)
         {
             GiveTip();
+            
+        }
+
+        private void StarsFade_Tick(object sender, EventArgs e)
+        {
+            if (Game.List0fStars.Count > 1)
+            {
+                Game.List0fStars[CYPVP.Random.Next(0, Game.List0fStars.Count)].isSelected = true;
+                RemoveStars();
+            }
+            
         }
     }
 }

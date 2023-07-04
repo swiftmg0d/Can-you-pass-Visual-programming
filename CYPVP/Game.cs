@@ -15,7 +15,6 @@ namespace CYPVP
         public List<Star> List0fStars { get; set; }
         public SoundPlayer CollectCoinSound { get; set; }
         
-
         public  Slime MainSlime { get; set; }
         public int Score { get; set; }
         public int Time { get; set; }
@@ -32,20 +31,6 @@ namespace CYPVP
             
         }
 
-        public void CreateStars()
-        {
-            for(int i=0; i < 5; i++)
-            {
-                PictureBox star = new PictureBox();
-                star.BackColor = Color.Transparent;
-                star.Image = Properties.Resources.star;
-                int x = CYPVP.Random.Next(25, 696);
-                int y = CYPVP.Random.Next(93, 486);
-                star.Location=new Point(x, y);
-                List0fStars.Add(new Star(star));
-            }
-            
-        }
         public static int Distance0f(Point x, Point y)
         {
             return (int)Math.Sqrt(Math.Pow((x.X - y.X), 2) + Math.Pow((x.Y - y.Y), 2));
@@ -74,14 +59,10 @@ namespace CYPVP
 
         internal void MoveSlime()
         {
-            MainSlime.Move((int)MainCharacter.CharacterSkin.Location.X, (int)MainCharacter.CharacterSkin.Location.Y);
+            MainSlime.Move((int)MainCharacter.CharacterSkin.Location.X, (int)MainCharacter.CharacterSkin.Location.Y,5);
             
         }
-        public int Check()
-        {
-            return Distance0f(MainCharacter.CharacterSkin.Location, List0fStars[0].StarSkin.Location);
-        }
-
+       
         internal void CheckIfEaten()
         {
             foreach(Star c in List0fStars)

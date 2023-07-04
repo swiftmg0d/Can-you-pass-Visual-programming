@@ -37,14 +37,15 @@
             this.ScorePoints = new System.Windows.Forms.Timer(this.components);
             this.lb_TimeLeft = new System.Windows.Forms.Label();
             this.StarsSpawn = new System.Windows.Forms.Timer(this.components);
+            this.lb_Tips_Heading = new System.Windows.Forms.Label();
+            this.lb_Heading_text = new System.Windows.Forms.Label();
+            this.TipsTimer = new System.Windows.Forms.Timer(this.components);
+            this.StarsFade = new System.Windows.Forms.Timer(this.components);
             this.Hud1 = new System.Windows.Forms.PictureBox();
             this.TimeLeftLabel = new System.Windows.Forms.PictureBox();
             this.Slime = new System.Windows.Forms.PictureBox();
             this.Character = new System.Windows.Forms.PictureBox();
             this.Hud = new System.Windows.Forms.PictureBox();
-            this.lb_Tips_Heading = new System.Windows.Forms.Label();
-            this.lb_Heading_text = new System.Windows.Forms.Label();
-            this.TipsTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Hud1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TimeLeftLabel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slime)).BeginInit();
@@ -69,7 +70,7 @@
             this.lb_Points.AutoSize = true;
             this.lb_Points.Font = new System.Drawing.Font("Algerian", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Points.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lb_Points.Location = new System.Drawing.Point(411, 22);
+            this.lb_Points.Location = new System.Drawing.Point(396, 22);
             this.lb_Points.Name = "lb_Points";
             this.lb_Points.Size = new System.Drawing.Size(86, 18);
             this.lb_Points.TabIndex = 3;
@@ -94,6 +95,39 @@
             // 
             this.StarsSpawn.Interval = 5000;
             this.StarsSpawn.Tick += new System.EventHandler(this.StarsSpawn_Tick);
+            // 
+            // lb_Tips_Heading
+            // 
+            this.lb_Tips_Heading.AutoSize = true;
+            this.lb_Tips_Heading.Font = new System.Drawing.Font("Algerian", 10F, System.Drawing.FontStyle.Bold);
+            this.lb_Tips_Heading.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lb_Tips_Heading.Location = new System.Drawing.Point(547, 22);
+            this.lb_Tips_Heading.Name = "lb_Tips_Heading";
+            this.lb_Tips_Heading.Size = new System.Drawing.Size(39, 15);
+            this.lb_Tips_Heading.TabIndex = 7;
+            this.lb_Tips_Heading.Text = "TIPS";
+            // 
+            // lb_Heading_text
+            // 
+            this.lb_Heading_text.AutoSize = true;
+            this.lb_Heading_text.Font = new System.Drawing.Font("Algerian", 9.6F, System.Drawing.FontStyle.Bold);
+            this.lb_Heading_text.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lb_Heading_text.Location = new System.Drawing.Point(592, 22);
+            this.lb_Heading_text.MaximumSize = new System.Drawing.Size(190, 0);
+            this.lb_Heading_text.Name = "lb_Heading_text";
+            this.lb_Heading_text.Size = new System.Drawing.Size(61, 15);
+            this.lb_Heading_text.TabIndex = 8;
+            this.lb_Heading_text.Text = "label1";
+            // 
+            // TipsTimer
+            // 
+            this.TipsTimer.Interval = 10000;
+            this.TipsTimer.Tick += new System.EventHandler(this.TipsTimer_Tick);
+            // 
+            // StarsFade
+            // 
+            this.StarsFade.Interval = 1200;
+            this.StarsFade.Tick += new System.EventHandler(this.StarsFade_Tick);
             // 
             // Hud1
             // 
@@ -127,7 +161,7 @@
             // 
             // Character
             // 
-            this.Character.Image = global::CYPVP.Properties.Resources.down_standing;
+            this.Character.Image = global::CYPVP.Properties.Resources.left_standing;
             this.Character.Location = new System.Drawing.Point(199, 157);
             this.Character.Name = "Character";
             this.Character.Size = new System.Drawing.Size(45, 57);
@@ -144,34 +178,6 @@
             this.Hud.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Hud.TabIndex = 4;
             this.Hud.TabStop = false;
-            // 
-            // lb_Tips_Heading
-            // 
-            this.lb_Tips_Heading.AutoSize = true;
-            this.lb_Tips_Heading.Font = new System.Drawing.Font("Algerian", 10F, System.Drawing.FontStyle.Bold);
-            this.lb_Tips_Heading.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lb_Tips_Heading.Location = new System.Drawing.Point(547, 22);
-            this.lb_Tips_Heading.Name = "lb_Tips_Heading";
-            this.lb_Tips_Heading.Size = new System.Drawing.Size(39, 15);
-            this.lb_Tips_Heading.TabIndex = 7;
-            this.lb_Tips_Heading.Text = "TIPS";
-            // 
-            // lb_Heading_text
-            // 
-            this.lb_Heading_text.AutoSize = true;
-            this.lb_Heading_text.Font = new System.Drawing.Font("Algerian", 9.6F, System.Drawing.FontStyle.Bold);
-            this.lb_Heading_text.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lb_Heading_text.Location = new System.Drawing.Point(592, 22);
-            this.lb_Heading_text.MaximumSize = new System.Drawing.Size(190, 0);
-            this.lb_Heading_text.Name = "lb_Heading_text";
-            this.lb_Heading_text.Size = new System.Drawing.Size(61, 15);
-            this.lb_Heading_text.TabIndex = 8;
-            this.lb_Heading_text.Text = "label1";
-            // 
-            // TipsTimer
-            // 
-            this.TipsTimer.Interval = 10000;
-            this.TipsTimer.Tick += new System.EventHandler(this.TipsTimer_Tick);
             // 
             // GameWindow
             // 
@@ -221,5 +227,6 @@
         private System.Windows.Forms.Label lb_Tips_Heading;
         private System.Windows.Forms.Label lb_Heading_text;
         private System.Windows.Forms.Timer TipsTimer;
+        private System.Windows.Forms.Timer StarsFade;
     }
 }

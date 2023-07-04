@@ -160,6 +160,15 @@ namespace CYPVP.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Epic_Fail_Sound_Effect {
+            get {
+                return ResourceManager.GetStream("Epic_Fail_Sound_Effect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap left_running {
@@ -294,6 +303,15 @@ namespace CYPVP.Properties {
             get {
                 object obj = ResourceManager.GetObject("up_standing", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Yayyy_Sound_Effect {
+            get {
+                return ResourceManager.GetStream("Yayyy_Sound_Effect", resourceCulture);
             }
         }
     }
