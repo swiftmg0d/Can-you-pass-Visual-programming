@@ -25,10 +25,11 @@ namespace CYPVP
         public Game(int height,int width,PictureBox mainCharacter,PictureBox mainSlime) {
             MainCharacter = new Character(mainCharacter);
             MainSlime=new Slime(mainSlime);
-            Time = 90;
+            Time = 79;
             Score = 0;
             List0fStars=new List<Star>();
             CollectCoinSound = new SoundPlayer(Properties.Resources.coin_collect);
+           
             SlimeRadiationPoints = 5;
         }
 

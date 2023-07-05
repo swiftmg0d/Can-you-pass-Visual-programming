@@ -17,8 +17,9 @@ namespace CYPVP
     {
         private Game Game { get; set; }
         private int Count { get; set; } = 0;
-        public SoundPlayer sound { get; set; }
-        
+
+        public static SoundPlayer SlimeRadiationSound { get; set; }
+
         public List<String> List0fTips { get; set; } = new List<string>();
     
         public GameWindow(String Difficulty)
@@ -31,7 +32,10 @@ namespace CYPVP
             UpdateScore();
             GenerateTips();
             GiveTip();
+            SlimeRadiationSound = new SoundPlayer(Properties.Resources.slime_radiation_sound);
+           
         }
+        
         private void SetUpDiffuculty(String Difficulty)
         {
             if (Difficulty == "Easy")
@@ -42,7 +46,7 @@ namespace CYPVP
             else
             {
                 Game.Score = -10;
-                Game.MainSlime.speed = 9;
+                Game.MainSlime.speed = 7;
                 Game.SlimeRadiationPoints = 10;
             }
 
@@ -55,8 +59,8 @@ namespace CYPVP
             CharacterMovements.Start();
             SlimeMovements.Interval = 200;
             SlimeMovements.Start();
-            TimeLeft.Interval = 22500;
-            TimeLeft.Start();
+            SlimeRadiation.Start();
+            SlimeRadiation.Interval = 2000;
             ScorePoints.Interval = 1000;
             ScorePoints.Start();
             TipsTimer.Interval = 10000;
@@ -72,6 +76,18 @@ namespace CYPVP
             ScorePoints.Stop();
             TipsTimer.Stop();
             StarsFade.Stop();
+            SlimeRadiation.Stop();
+            
+        }
+        private void ContinueGame()
+        {
+            StarsSpawn.Start();
+            CharacterMovements.Start();
+            SlimeMovements.Start();
+            ScorePoints.Start();
+            TipsTimer.Start();
+            StarsFade.Start();
+            SlimeRadiation.Start();
         }
         private void UpdateTime()
         {
@@ -88,9 +104,12 @@ namespace CYPVP
         }
         private void GenerateTips()
         {
+            List0fTips.Add("Cure radiation by eating stars");
             List0fTips.Add("Collect the stars to increase points!");
-            List0fTips.Add("Avoid losing 5 points by dodging the slime!");
+            List0fTips.Add("Avoid losing 5/10 points by dodging the slime!");
+            List0fTips.Add("The radiation of the slime can hit you within 8cm");
             List0fTips.Add("Stars give you 10 points!");
+            List0fTips.Add("You can pause the game  with ESC and unpause with F");
         }
 
         private void GameWindow_KeyDown(object sender, KeyEventArgs e)
@@ -141,6 +160,19 @@ namespace CYPVP
 
         private void GameWindow_KeyUp(object sender, KeyEventArgs e)
         {
+            if (e.KeyValue == (char)Keys.Escape)
+            {
+                StopGame();
+                lb_Paused.Text = "GAME PAUSED";
+                lb_Paused1.Text = "PRESS F TO UNPAUSE";
+            }
+            if (e.KeyValue == (char)Keys.F)
+            {
+                ContinueGame();
+                lb_Paused.Text = "";
+                lb_Paused1.Text = "";
+            }
+
             if (e.KeyValue == (char)Keys.W)
             {
                 Game.MainCharacter.CanMoveUp = false;
@@ -189,6 +221,7 @@ namespace CYPVP
                 if (Game.List0fStars[i].IsEaten)
                 {
                     Game.CollectCoinSound.Play();
+                    Game.MainSlime.isCloseEnough = false;
                     this.Controls.Remove(Game.List0fStars[i].StarSkin);
                     Game.List0fStars.RemoveAt(i);
                 }else if (Game.List0fStars[i].isSelected && !Game.List0fStars[i].IsEaten)
@@ -197,7 +230,7 @@ namespace CYPVP
                     Game.List0fStars.RemoveAt(i);
                 }
             }
-
+            
         }
     
         private void Movements_Tick(object sender, EventArgs e)
@@ -210,35 +243,51 @@ namespace CYPVP
         private void SlimeMovements_Tick(object sender, EventArgs e)
         {
             Game.MoveSlime();
+            if (Game.MainSlime.isCloseEnough)
+            {
+                SlimeRadiationSound.PlayLooping();
+            }
+            
             
         }
 
-        private void TimeLeft_Tick(object sender, EventArgs e)
+      
+
+        private void ScorePoints_Tick(object sender, EventArgs e)
         {
-           // Game.CreateStars();
-            foreach(Star star in Game.List0fStars)
+            if (Game.Time % 20 == 0)
             {
-                this.Controls.Add(star.StarSkin);
+
+                Count++;
+                if (Count == 1)
+                {
+                    TimeLeftLabel.Image = Properties.Resources._2_statusbar;
+
+                }
+                else if (Count == 2)
+                {
+                    TimeLeftLabel.Image = Properties.Resources._3_statusbar;
+
+
+                }
+                else if (Count == 3)
+                {
+                    TimeLeftLabel.Image = Properties.Resources._4_statusbar;
+
+
+                }
+                else if (Count == 4)
+                {
+                    TimeLeftLabel.Image = Properties.Resources._5_statusbar;
+                    
+                }
             }
-
-            Count++;
-            if(Count == 1) {
-                TimeLeftLabel.Image = Properties.Resources._2_statusbar;
-                
-            }
-            else if(Count == 2) {
-                TimeLeftLabel.Image = Properties.Resources._3_statusbar;
-
-
-            }
-            else if(Count == 3) {
-                TimeLeftLabel.Image = Properties.Resources._4_statusbar;
-
-
-            }
-            else if(Count == 4)
+            if (Game.Time >= 0)
             {
-                TimeLeftLabel.Image = Properties.Resources._5_statusbar;
+                Game.Time--;
+            }
+            else
+            {
                 this.Hide();
                 StopGame();
                 TimeLeft.Stop();
@@ -247,22 +296,7 @@ namespace CYPVP
 
             }
 
-
-
-
-        }
-
-        private void ScorePoints_Tick(object sender, EventArgs e)
-        {
-            if (Game.Time >= 0)
-            {
-                Game.Time--;
-            }
-            if(Game.MainSlime.isCloseEnough)
-            {
-                Game.Score-=Game.SlimeRadiationPoints;
-            }
-            UpdateScore();
+          
             UpdateTime();
         }
 
@@ -276,12 +310,27 @@ namespace CYPVP
             star.Location = new Point(x, y);
             return star;
         }
-        private void StarsSpawn_Tick(object sender, EventArgs e)
+        private bool Check(PictureBox box)
         {
+            foreach(Star star in Game.List0fStars)
+            {
+                if (Game.Distance0f(box.Location, star.StarSkin.Location) < 70)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        private void StarsSpawn_Tick(object sender, EventArgs e)
+        {       
             PictureBox NewStar = MakeStar();
+            while (Check(NewStar) != true)
+            {
+                NewStar=MakeStar();
+            }
             Game.List0fStars.Add(new Star(NewStar));
             this.Controls.Add(NewStar);
-            
+ 
         }
 
         private void TipsTimer_Tick(object sender, EventArgs e)
@@ -300,7 +349,31 @@ namespace CYPVP
             
         }
 
-        
+        private void SlimeRadiation_Tick(object sender, EventArgs e)
+        {
+            if (Game.MainSlime.isCloseEnough)
+            {
+                Game.Score -= Game.SlimeRadiationPoints;
+            }
+            UpdateScore();
+            
+        }
+
+        private void GameWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SlimeRadiation.Stop();
+        }
+
+        private void GameWindow_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            SlimeRadiation.Stop();
+
+        }
+
+        private void GameWindow_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
