@@ -41,14 +41,16 @@
             this.lb_Heading_text = new System.Windows.Forms.Label();
             this.TipsTimer = new System.Windows.Forms.Timer(this.components);
             this.StarsFade = new System.Windows.Forms.Timer(this.components);
+            this.lb_Paused = new System.Windows.Forms.Label();
+            this.lb_Paused1 = new System.Windows.Forms.Label();
+            this.SlimeRadiation = new System.Windows.Forms.Timer(this.components);
+            this.ChestTImer = new System.Windows.Forms.Timer(this.components);
             this.Hud1 = new System.Windows.Forms.PictureBox();
             this.TimeLeftLabel = new System.Windows.Forms.PictureBox();
             this.Slime = new System.Windows.Forms.PictureBox();
             this.Character = new System.Windows.Forms.PictureBox();
             this.Hud = new System.Windows.Forms.PictureBox();
-            this.lb_Paused = new System.Windows.Forms.Label();
-            this.lb_Paused1 = new System.Windows.Forms.Label();
-            this.SlimeRadiation = new System.Windows.Forms.Timer(this.components);
+            this.lb_ChestAnoucment = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Hud1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TimeLeftLabel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slime)).BeginInit();
@@ -128,6 +130,36 @@
             this.StarsFade.Interval = 1200;
             this.StarsFade.Tick += new System.EventHandler(this.StarsFade_Tick);
             // 
+            // lb_Paused
+            // 
+            this.lb_Paused.AutoSize = true;
+            this.lb_Paused.Font = new System.Drawing.Font("Algerian", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Paused.ForeColor = System.Drawing.Color.White;
+            this.lb_Paused.Location = new System.Drawing.Point(546, 94);
+            this.lb_Paused.Name = "lb_Paused";
+            this.lb_Paused.Size = new System.Drawing.Size(0, 24);
+            this.lb_Paused.TabIndex = 9;
+            // 
+            // lb_Paused1
+            // 
+            this.lb_Paused1.AutoSize = true;
+            this.lb_Paused1.Font = new System.Drawing.Font("Algerian", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Paused1.ForeColor = System.Drawing.Color.White;
+            this.lb_Paused1.Location = new System.Drawing.Point(552, 115);
+            this.lb_Paused1.Name = "lb_Paused1";
+            this.lb_Paused1.Size = new System.Drawing.Size(0, 24);
+            this.lb_Paused1.TabIndex = 10;
+            // 
+            // SlimeRadiation
+            // 
+            this.SlimeRadiation.Interval = 2000;
+            this.SlimeRadiation.Tick += new System.EventHandler(this.SlimeRadiation_Tick);
+            // 
+            // ChestTImer
+            // 
+            this.ChestTImer.Interval = 5000;
+            this.ChestTImer.Tick += new System.EventHandler(this.ChestTImer_Tick);
+            // 
             // Hud1
             // 
             this.Hud1.Image = global::CYPVP.Properties.Resources.Btn01;
@@ -178,30 +210,16 @@
             this.Hud.TabIndex = 4;
             this.Hud.TabStop = false;
             // 
-            // lb_Paused
+            // lb_ChestAnoucment
             // 
-            this.lb_Paused.AutoSize = true;
-            this.lb_Paused.Font = new System.Drawing.Font("Algerian", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Paused.ForeColor = System.Drawing.Color.White;
-            this.lb_Paused.Location = new System.Drawing.Point(546, 94);
-            this.lb_Paused.Name = "lb_Paused";
-            this.lb_Paused.Size = new System.Drawing.Size(0, 24);
-            this.lb_Paused.TabIndex = 9;
-            // 
-            // lb_Paused1
-            // 
-            this.lb_Paused1.AutoSize = true;
-            this.lb_Paused1.Font = new System.Drawing.Font("Algerian", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Paused1.ForeColor = System.Drawing.Color.White;
-            this.lb_Paused1.Location = new System.Drawing.Point(552, 115);
-            this.lb_Paused1.Name = "lb_Paused1";
-            this.lb_Paused1.Size = new System.Drawing.Size(0, 24);
-            this.lb_Paused1.TabIndex = 10;
-            // 
-            // SlimeRadiation
-            // 
-            this.SlimeRadiation.Interval = 2000;
-            this.SlimeRadiation.Tick += new System.EventHandler(this.SlimeRadiation_Tick);
+            this.lb_ChestAnoucment.AutoSize = true;
+            this.lb_ChestAnoucment.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_ChestAnoucment.ForeColor = System.Drawing.Color.White;
+            this.lb_ChestAnoucment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lb_ChestAnoucment.Location = new System.Drawing.Point(546, 75);
+            this.lb_ChestAnoucment.Name = "lb_ChestAnoucment";
+            this.lb_ChestAnoucment.Size = new System.Drawing.Size(0, 19);
+            this.lb_ChestAnoucment.TabIndex = 11;
             // 
             // GameWindow
             // 
@@ -209,6 +227,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.lb_ChestAnoucment);
             this.Controls.Add(this.lb_Paused1);
             this.Controls.Add(this.lb_Paused);
             this.Controls.Add(this.lb_Heading_text);
@@ -261,5 +280,7 @@
         private System.Windows.Forms.Label lb_Paused;
         private System.Windows.Forms.Label lb_Paused1;
         private System.Windows.Forms.Timer SlimeRadiation;
+        private System.Windows.Forms.Timer ChestTImer;
+        private System.Windows.Forms.Label lb_ChestAnoucment;
     }
 }

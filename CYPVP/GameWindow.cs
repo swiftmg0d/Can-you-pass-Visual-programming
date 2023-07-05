@@ -67,6 +67,8 @@ namespace CYPVP
             TipsTimer.Start();
             StarsFade.Interval = 12000;
             StarsFade.Start();
+            ChestTImer.Start();
+            ChestTImer.Interval = 5000;
         }
         private void StopGame()
         {
@@ -160,6 +162,33 @@ namespace CYPVP
 
         private void GameWindow_KeyUp(object sender, KeyEventArgs e)
         {
+
+            if (e.KeyValue == (char)Keys.E)
+            {
+                if (Game.Chest != null)
+                {
+                    if (Game.Chest.isOpen == false)
+                    {
+                        if (Game.Distance0f(Game.MainCharacter.CharacterSkin.Location, Game.Chest.ChestSkin.Location) < 50)
+                        {
+                            StopGame();
+                            int random = CYPVP.Random.Next(0, Game.List0fQuestions.Count);
+                            QuestionForm questionForm = new QuestionForm(Game.List0fQuestions[random].Text, Game.List0fQuestions[random].CorrectAnswer);
+                            if (questionForm.ShowDialog() == DialogResult.OK)
+                            {
+                                Game.Score += 10;
+                            }
+                            else
+                            {
+                                Game.Score -= 20;
+                            }
+                            Game.List0fQuestions[random].IsItAnswered = true;
+                            ContinueGame();
+                        }
+                    }
+                }
+            }
+
             if (e.KeyValue == (char)Keys.Escape)
             {
                 StopGame();
@@ -282,11 +311,11 @@ namespace CYPVP
                     
                 }
             }
-            if (Game.Time >= 0)
+            if (Game.Time > 0)
             {
                 Game.Time--;
             }
-            else
+            else if(Game.Time==0)
             {
                 this.Hide();
                 StopGame();
@@ -300,6 +329,16 @@ namespace CYPVP
             UpdateTime();
         }
 
+        private PictureBox MakeChest()
+        {
+            PictureBox Chest = new PictureBox();
+            Chest.BackColor = Color.Transparent;
+            Chest.Image = Properties.Resources.chest_unopen;
+            int x = CYPVP.Random.Next(25, 696);
+            int y = CYPVP.Random.Next(93, 486);
+            Chest.Location = new Point(x, y);
+            return Chest;
+        }
         private PictureBox MakeStar()
         {
             PictureBox star = new PictureBox();
@@ -373,6 +412,19 @@ namespace CYPVP
         private void GameWindow_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void ChestTImer_Tick(object sender, EventArgs e)
+        {
+            PictureBox Chest = MakeChest();
+            while (Check(Chest) != true)
+            {
+                Chest = MakeChest();
+            }
+            Game.Chest = new Chest(Chest);
+            this.Controls.Add(Chest);
+
+            ChestTImer.Stop();
         }
     }
 }

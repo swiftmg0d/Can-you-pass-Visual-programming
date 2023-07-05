@@ -12,25 +12,33 @@ namespace CYPVP
     public class Game
     {
         public Character MainCharacter { get; set; }
-        public List<Star> List0fStars { get; set; }
+        public List<Star> List0fStars { get; set; }=new List<Star>();
         public SoundPlayer CollectCoinSound { get; set; }
         public int SlimeRadiationPoints { get; set; }
-
+        public List<Question> List0fQuestions { get; set; }=new List<Question>();
         public  Slime MainSlime { get; set; }
         public int Score { get; set; }
         public int Time { get; set; }
+        public Chest Chest { get; set; }
 
 
-        
+        public void LoadQuestions()
+        {
+            List0fQuestions.Add(new Question("Can you write a class without specifying namespace?", "YES"));
+            List0fQuestions.Add(new Question("Does Move and LocationChanged, Resize and SizeChanged have the same functionality?", "YES"));
+        }
+        public void SetUpGame()
+        {
+            Time = 79;
+            Score = 0;
+            CollectCoinSound = new SoundPlayer(Properties.Resources.coin_collect);
+            SlimeRadiationPoints = 5;
+        }
         public Game(int height,int width,PictureBox mainCharacter,PictureBox mainSlime) {
             MainCharacter = new Character(mainCharacter);
             MainSlime=new Slime(mainSlime);
-            Time = 79;
-            Score = 0;
-            List0fStars=new List<Star>();
-            CollectCoinSound = new SoundPlayer(Properties.Resources.coin_collect);
-           
-            SlimeRadiationPoints = 5;
+            SetUpGame();
+            LoadQuestions();
         }
 
         public static int Distance0f(Point x, Point y)
@@ -80,5 +88,7 @@ namespace CYPVP
 
            
         }
+
+        
     }
 }
