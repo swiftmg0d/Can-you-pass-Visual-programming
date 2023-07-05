@@ -15,11 +15,13 @@ namespace CYPVP
         public bool CanMoveDown { get; set; }
         public bool CanMoveRight { get; set; }
         public bool CanMoveLeft { get; set; }
+       
         public Character(PictureBox Character)
         {
             CharacterSkin = Character;
             CharacterSkin.BackColor = Color.Transparent;
         }
+        
         public void Move(String Position,int Speed,int Height,int Width,int x,int y)
         {
             
@@ -78,6 +80,7 @@ namespace CYPVP
 
             
         }
+       
         public bool Check()
         {
             return CanMoveDown == false && CanMoveUp == false && CanMoveLeft == false && CanMoveRight == false;

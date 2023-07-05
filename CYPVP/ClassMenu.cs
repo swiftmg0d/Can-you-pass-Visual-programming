@@ -16,9 +16,7 @@ namespace CYPVP
         {
             InitializeComponent();
         }
-
-        
-
+  
         private void btn_CS_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;

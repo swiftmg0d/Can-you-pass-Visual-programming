@@ -12,7 +12,7 @@ namespace CYPVP
         public PictureBox ChestSkin { get; set; }
         public bool isOpen { get; set; }
         public bool hasSpawned { get; set; }    
-
+        
         public Chest(PictureBox chestSkin)
         {
             ChestSkin = chestSkin;

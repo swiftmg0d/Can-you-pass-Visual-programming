@@ -20,13 +20,20 @@ namespace CYPVP
         public int Score { get; set; }
         public int Time { get; set; }
         public Chest Chest { get; set; }
-
-
+        
+        public Game(int height,int width,PictureBox mainCharacter,PictureBox mainSlime) {
+            MainCharacter = new Character(mainCharacter);
+            MainSlime=new Slime(mainSlime);
+            SetUpGame();
+            LoadQuestions();
+        }
+       
         public void LoadQuestions()
         {
             List0fQuestions.Add(new Question("Can you write a class without specifying namespace?", "Yes"));
             List0fQuestions.Add(new Question("Does Move and LocationChanged, Resize and SizeChanged have the same functionality?", "Yes"));
         }
+        
         public void SetUpGame()
         {
             Time = 79;
@@ -34,17 +41,12 @@ namespace CYPVP
             SoundPlayer = new SoundPlayer(Properties.Resources.coin_collect);
             SlimeRadiationPoints = 5;
         }
-        public Game(int height,int width,PictureBox mainCharacter,PictureBox mainSlime) {
-            MainCharacter = new Character(mainCharacter);
-            MainSlime=new Slime(mainSlime);
-            SetUpGame();
-            LoadQuestions();
-        }
-
+       
         public static int Distance0f(Point x, Point y)
         {
             return (int)Math.Sqrt(Math.Pow((x.X - y.X), 2) + Math.Pow((x.Y - y.Y), 2));
         }
+        
         internal void MoveCharacter(int Height,int Width)
         {
             if (MainCharacter.CanMoveUp)
@@ -66,13 +68,13 @@ namespace CYPVP
             
            
         }
-
+        
         internal void MoveSlime()
         {
             MainSlime.Move((int)MainCharacter.CharacterSkin.Location.X, (int)MainCharacter.CharacterSkin.Location.Y);
             
-        }
-       
+        }      
+        
         internal void CheckIfEaten()
         {
             foreach(Star c in List0fStars)

@@ -134,7 +134,7 @@
             this.lb_Paused.AutoSize = true;
             this.lb_Paused.Font = new System.Drawing.Font("Algerian", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Paused.ForeColor = System.Drawing.Color.White;
-            this.lb_Paused.Location = new System.Drawing.Point(546, 94);
+            this.lb_Paused.Location = new System.Drawing.Point(530, 108);
             this.lb_Paused.Name = "lb_Paused";
             this.lb_Paused.Size = new System.Drawing.Size(0, 24);
             this.lb_Paused.TabIndex = 9;
@@ -144,7 +144,7 @@
             this.lb_Paused1.AutoSize = true;
             this.lb_Paused1.Font = new System.Drawing.Font("Algerian", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Paused1.ForeColor = System.Drawing.Color.White;
-            this.lb_Paused1.Location = new System.Drawing.Point(552, 115);
+            this.lb_Paused1.Location = new System.Drawing.Point(536, 129);
             this.lb_Paused1.Name = "lb_Paused1";
             this.lb_Paused1.Size = new System.Drawing.Size(0, 24);
             this.lb_Paused1.TabIndex = 10;
@@ -160,7 +160,7 @@
             this.lb_ChestAnoucment.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_ChestAnoucment.ForeColor = System.Drawing.Color.White;
             this.lb_ChestAnoucment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lb_ChestAnoucment.Location = new System.Drawing.Point(546, 75);
+            this.lb_ChestAnoucment.Location = new System.Drawing.Point(186, 18);
             this.lb_ChestAnoucment.Name = "lb_ChestAnoucment";
             this.lb_ChestAnoucment.Size = new System.Drawing.Size(0, 19);
             this.lb_ChestAnoucment.TabIndex = 11;
@@ -168,9 +168,9 @@
             // Hud1
             // 
             this.Hud1.Image = global::CYPVP.Properties.Resources.Btn01;
-            this.Hud1.Location = new System.Drawing.Point(534, 7);
+            this.Hud1.Location = new System.Drawing.Point(534, 3);
             this.Hud1.Name = "Hud1";
-            this.Hud1.Size = new System.Drawing.Size(308, 80);
+            this.Hud1.Size = new System.Drawing.Size(308, 93);
             this.Hud1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Hud1.TabIndex = 6;
             this.Hud1.TabStop = false;
@@ -188,7 +188,7 @@
             // Slime
             // 
             this.Slime.Image = global::CYPVP.Properties.Resources.slime_left;
-            this.Slime.Location = new System.Drawing.Point(534, 160);
+            this.Slime.Location = new System.Drawing.Point(534, 226);
             this.Slime.Name = "Slime";
             this.Slime.Size = new System.Drawing.Size(59, 60);
             this.Slime.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -239,8 +239,6 @@
             this.Name = "GameWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "CYPVP";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GameWindow_FormClosing);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.GameWindow_FormClosed);
             this.Load += new System.EventHandler(this.GameWindow_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GameWindow_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.GameWindow_KeyUp);
