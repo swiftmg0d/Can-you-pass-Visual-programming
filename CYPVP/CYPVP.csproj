@@ -48,6 +48,13 @@
   <ItemGroup>
     <Compile Include="AudioManager.cs" />
     <Compile Include="Character.cs" />
+    <Compile Include="Chest.cs" />
+    <Compile Include="ClassMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMenu.Designer.cs">
+      <DependentUpon>ClassMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="EndGame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,8 +84,18 @@
     <Compile Include="MainMenu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Question.cs" />
+    <Compile Include="QuestionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuestionForm.Designer.cs">
+      <DependentUpon>QuestionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Slime.cs" />
     <Compile Include="Star.cs" />
+    <EmbeddedResource Include="ClassMenu.resx">
+      <DependentUpon>ClassMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EndGame.resx">
       <DependentUpon>EndGame.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,6 +118,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="QuestionForm.resx">
+      <DependentUpon>QuestionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -155,9 +175,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\4.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\5.png" />
@@ -254,6 +271,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Yayyy Sound Effect.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chest_open_preview_rev_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chest_unopen_preview_rev_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chest_landing.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chest_opening.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Correct Answer Sound Effect.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Incorrect sound effect.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

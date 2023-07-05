@@ -41,6 +41,10 @@
             this.lb_Heading_text = new System.Windows.Forms.Label();
             this.TipsTimer = new System.Windows.Forms.Timer(this.components);
             this.StarsFade = new System.Windows.Forms.Timer(this.components);
+            this.lb_Paused = new System.Windows.Forms.Label();
+            this.lb_Paused1 = new System.Windows.Forms.Label();
+            this.SlimeRadiation = new System.Windows.Forms.Timer(this.components);
+            this.lb_ChestAnoucment = new System.Windows.Forms.Label();
             this.Hud1 = new System.Windows.Forms.PictureBox();
             this.TimeLeftLabel = new System.Windows.Forms.PictureBox();
             this.Slime = new System.Windows.Forms.PictureBox();
@@ -60,10 +64,6 @@
             // SlimeMovements
             // 
             this.SlimeMovements.Tick += new System.EventHandler(this.SlimeMovements_Tick);
-            // 
-            // TimeLeft
-            // 
-            this.TimeLeft.Tick += new System.EventHandler(this.TimeLeft_Tick);
             // 
             // lb_Points
             // 
@@ -129,12 +129,48 @@
             this.StarsFade.Interval = 1200;
             this.StarsFade.Tick += new System.EventHandler(this.StarsFade_Tick);
             // 
+            // lb_Paused
+            // 
+            this.lb_Paused.AutoSize = true;
+            this.lb_Paused.Font = new System.Drawing.Font("Algerian", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Paused.ForeColor = System.Drawing.Color.White;
+            this.lb_Paused.Location = new System.Drawing.Point(530, 108);
+            this.lb_Paused.Name = "lb_Paused";
+            this.lb_Paused.Size = new System.Drawing.Size(0, 24);
+            this.lb_Paused.TabIndex = 9;
+            // 
+            // lb_Paused1
+            // 
+            this.lb_Paused1.AutoSize = true;
+            this.lb_Paused1.Font = new System.Drawing.Font("Algerian", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Paused1.ForeColor = System.Drawing.Color.White;
+            this.lb_Paused1.Location = new System.Drawing.Point(536, 129);
+            this.lb_Paused1.Name = "lb_Paused1";
+            this.lb_Paused1.Size = new System.Drawing.Size(0, 24);
+            this.lb_Paused1.TabIndex = 10;
+            // 
+            // SlimeRadiation
+            // 
+            this.SlimeRadiation.Interval = 2000;
+            this.SlimeRadiation.Tick += new System.EventHandler(this.SlimeRadiation_Tick);
+            // 
+            // lb_ChestAnoucment
+            // 
+            this.lb_ChestAnoucment.AutoSize = true;
+            this.lb_ChestAnoucment.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_ChestAnoucment.ForeColor = System.Drawing.Color.White;
+            this.lb_ChestAnoucment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lb_ChestAnoucment.Location = new System.Drawing.Point(186, 18);
+            this.lb_ChestAnoucment.Name = "lb_ChestAnoucment";
+            this.lb_ChestAnoucment.Size = new System.Drawing.Size(0, 19);
+            this.lb_ChestAnoucment.TabIndex = 11;
+            // 
             // Hud1
             // 
             this.Hud1.Image = global::CYPVP.Properties.Resources.Btn01;
-            this.Hud1.Location = new System.Drawing.Point(534, 7);
+            this.Hud1.Location = new System.Drawing.Point(534, 3);
             this.Hud1.Name = "Hud1";
-            this.Hud1.Size = new System.Drawing.Size(308, 65);
+            this.Hud1.Size = new System.Drawing.Size(308, 93);
             this.Hud1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Hud1.TabIndex = 6;
             this.Hud1.TabStop = false;
@@ -152,7 +188,7 @@
             // Slime
             // 
             this.Slime.Image = global::CYPVP.Properties.Resources.slime_left;
-            this.Slime.Location = new System.Drawing.Point(481, 154);
+            this.Slime.Location = new System.Drawing.Point(534, 226);
             this.Slime.Name = "Slime";
             this.Slime.Size = new System.Drawing.Size(59, 60);
             this.Slime.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -162,7 +198,7 @@
             // Character
             // 
             this.Character.Image = global::CYPVP.Properties.Resources.left_standing;
-            this.Character.Location = new System.Drawing.Point(199, 157);
+            this.Character.Location = new System.Drawing.Point(123, 163);
             this.Character.Name = "Character";
             this.Character.Size = new System.Drawing.Size(45, 57);
             this.Character.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -185,6 +221,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.lb_ChestAnoucment);
+            this.Controls.Add(this.lb_Paused1);
+            this.Controls.Add(this.lb_Paused);
             this.Controls.Add(this.lb_Heading_text);
             this.Controls.Add(this.lb_Tips_Heading);
             this.Controls.Add(this.Hud1);
@@ -198,7 +237,9 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "GameWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "CYPVP";
+            this.Load += new System.EventHandler(this.GameWindow_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GameWindow_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.GameWindow_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.Hud1)).EndInit();
@@ -228,5 +269,9 @@
         private System.Windows.Forms.Label lb_Heading_text;
         private System.Windows.Forms.Timer TipsTimer;
         private System.Windows.Forms.Timer StarsFade;
+        private System.Windows.Forms.Label lb_Paused;
+        private System.Windows.Forms.Label lb_Paused1;
+        private System.Windows.Forms.Timer SlimeRadiation;
+        private System.Windows.Forms.Label lb_ChestAnoucment;
     }
 }

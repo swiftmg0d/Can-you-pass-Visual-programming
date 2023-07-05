@@ -15,6 +15,7 @@ namespace CYPVP
     {
         public int Points { get; set; }
         public SoundPlayer soundPlayer { get; set; }
+        
         public EndGame(int points)
         {
             InitializeComponent();
@@ -50,14 +51,7 @@ namespace CYPVP
             if ((int)(Points / 10) >= 10) return 10;
             return (int)(Points / 10);
         }
-
-        private void EndGame_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        
-
+       
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();

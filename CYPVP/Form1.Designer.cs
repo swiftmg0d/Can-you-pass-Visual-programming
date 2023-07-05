@@ -141,6 +141,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CYPVP";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CYPVP";
             ((System.ComponentModel.ISupportInitialize)(this.pb_menu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_muteSound)).EndInit();

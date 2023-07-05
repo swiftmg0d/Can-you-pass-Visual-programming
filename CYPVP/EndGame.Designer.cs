@@ -138,8 +138,8 @@
             this.Controls.Add(this.lb_GameOver);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EndGame";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "CYPVP";
-            this.Load += new System.EventHandler(this.EndGame_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

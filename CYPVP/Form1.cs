@@ -66,35 +66,23 @@ namespace CYPVP
             Menu.Stop();
             if(help.ShowDialog() == DialogResult.Cancel) {
                 this.Show(); 
-                //Menu.Play();
+                Menu.Play();
 
             }
         }
 
         private void btn_start_Click(object sender, EventArgs e)
         {
-            
-                this.Hide();
-                Menu.Stop();
-                GameWindow GameWindow = new GameWindow();
-                GameWindow.StartPosition = FormStartPosition.Manual;
-                GameWindow.Location = this.Location;
-                if (GameWindow.ShowDialog() == DialogResult.Cancel)
-                {
-                    try
-                    {
-                        this.Show();
-                        GameWindow.Close();
-                    }
-                    catch { }
-                   
-                }
-            
-            
-            
-          
+            ClassMenu classMenu = new ClassMenu();
+            this.Hide();
+            Menu.Stop();
+            if (classMenu.ShowDialog() == DialogResult.Cancel)
+            {
+                this.Show();
+                Menu.Play();
+            }
         }
 
-        
+       
     }
 }

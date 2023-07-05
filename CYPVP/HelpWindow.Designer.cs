@@ -34,6 +34,8 @@
             this.lbl_control = new System.Windows.Forms.Label();
             this.lbl_instruction = new System.Windows.Forms.Label();
             this.lbl_instruction1 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Character)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,7 +45,7 @@
             this.lbl_heading.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.lbl_heading.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold);
             this.lbl_heading.ForeColor = System.Drawing.Color.White;
-            this.lbl_heading.Location = new System.Drawing.Point(71, 9);
+            this.lbl_heading.Location = new System.Drawing.Point(41, 9);
             this.lbl_heading.Name = "lbl_heading";
             this.lbl_heading.Size = new System.Drawing.Size(393, 42);
             this.lbl_heading.TabIndex = 8;
@@ -66,7 +68,7 @@
             this.lbl_control.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.lbl_control.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_control.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbl_control.Location = new System.Drawing.Point(115, 172);
+            this.lbl_control.Location = new System.Drawing.Point(123, 147);
             this.lbl_control.Name = "lbl_control";
             this.lbl_control.Size = new System.Drawing.Size(242, 21);
             this.lbl_control.TabIndex = 10;
@@ -96,12 +98,38 @@
             this.lbl_instruction1.TabIndex = 12;
             this.lbl_instruction1.Text = "....and also don\'t forget to open the chests ;) . Good luck!";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label1.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(123, 177);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(149, 21);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Press E to open chests!";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label2.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(123, 209);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(273, 21);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Press ESC to pause the game, F to unpause";
+            // 
             // HelpWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::CYPVP.Properties.Resources.background;
-            this.ClientSize = new System.Drawing.Size(535, 371);
+            this.ClientSize = new System.Drawing.Size(474, 369);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_instruction1);
             this.Controls.Add(this.lbl_instruction);
             this.Controls.Add(this.lbl_control);
@@ -111,6 +139,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "HelpWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Help";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.HelpWindow_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.HelpWindow_KeyUp);
@@ -126,5 +155,7 @@
         private System.Windows.Forms.Label lbl_control;
         private System.Windows.Forms.Label lbl_instruction;
         private System.Windows.Forms.Label lbl_instruction1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -25,3 +25,5 @@ C:\Users\Lenovo\Desktop\Can-you-pass-Visual-programming\CYPVP\obj\Debug\CYPVP.pd
 C:\Users\Lenovo\Desktop\Can-you-pass-Visual-programming\CYPVP\obj\Debug\CYPVP.HelpWindow.resources
 C:\Users\ZIVE\Can-you-pass-Visual-programming\CYPVP\obj\Debug\CYPVP.HelpWindow.resources
 C:\Users\ZIVE\Can-you-pass-Visual-programming\CYPVP\obj\Debug\CYPVP.EndGame.resources
+C:\Users\ZIVE\Can-you-pass-Visual-programming\CYPVP\obj\Debug\CYPVP.ClassMenu.resources
+C:\Users\ZIVE\Can-you-pass-Visual-programming\CYPVP\obj\Debug\CYPVP.QuestionForm.resources
