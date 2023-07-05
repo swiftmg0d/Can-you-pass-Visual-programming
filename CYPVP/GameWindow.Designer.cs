@@ -170,7 +170,7 @@
             this.Hud1.Image = global::CYPVP.Properties.Resources.Btn01;
             this.Hud1.Location = new System.Drawing.Point(534, 7);
             this.Hud1.Name = "Hud1";
-            this.Hud1.Size = new System.Drawing.Size(308, 65);
+            this.Hud1.Size = new System.Drawing.Size(308, 80);
             this.Hud1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Hud1.TabIndex = 6;
             this.Hud1.TabStop = false;
