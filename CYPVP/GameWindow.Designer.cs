@@ -152,7 +152,7 @@
             // Slime
             // 
             this.Slime.Image = global::CYPVP.Properties.Resources.slime_left;
-            this.Slime.Location = new System.Drawing.Point(481, 154);
+            this.Slime.Location = new System.Drawing.Point(660, 137);
             this.Slime.Name = "Slime";
             this.Slime.Size = new System.Drawing.Size(59, 60);
             this.Slime.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -162,7 +162,7 @@
             // Character
             // 
             this.Character.Image = global::CYPVP.Properties.Resources.left_standing;
-            this.Character.Location = new System.Drawing.Point(199, 157);
+            this.Character.Location = new System.Drawing.Point(145, 117);
             this.Character.Name = "Character";
             this.Character.Size = new System.Drawing.Size(45, 57);
             this.Character.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -198,6 +198,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "GameWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "CYPVP";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GameWindow_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.GameWindow_KeyUp);

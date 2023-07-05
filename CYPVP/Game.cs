@@ -14,7 +14,8 @@ namespace CYPVP
         public Character MainCharacter { get; set; }
         public List<Star> List0fStars { get; set; }
         public SoundPlayer CollectCoinSound { get; set; }
-        
+        public int SlimeRadiationPoints { get; set; }
+
         public  Slime MainSlime { get; set; }
         public int Score { get; set; }
         public int Time { get; set; }
@@ -28,7 +29,7 @@ namespace CYPVP
             Score = 0;
             List0fStars=new List<Star>();
             CollectCoinSound = new SoundPlayer(Properties.Resources.coin_collect);
-            
+            SlimeRadiationPoints = 5;
         }
 
         public static int Distance0f(Point x, Point y)
@@ -59,7 +60,7 @@ namespace CYPVP
 
         internal void MoveSlime()
         {
-            MainSlime.Move((int)MainCharacter.CharacterSkin.Location.X, (int)MainCharacter.CharacterSkin.Location.Y,5);
+            MainSlime.Move((int)MainCharacter.CharacterSkin.Location.X, (int)MainCharacter.CharacterSkin.Location.Y);
             
         }
        

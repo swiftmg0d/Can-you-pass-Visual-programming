@@ -43,7 +43,7 @@
             this.lbl_heading.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.lbl_heading.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold);
             this.lbl_heading.ForeColor = System.Drawing.Color.White;
-            this.lbl_heading.Location = new System.Drawing.Point(71, 9);
+            this.lbl_heading.Location = new System.Drawing.Point(41, 9);
             this.lbl_heading.Name = "lbl_heading";
             this.lbl_heading.Size = new System.Drawing.Size(393, 42);
             this.lbl_heading.TabIndex = 8;
@@ -101,7 +101,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::CYPVP.Properties.Resources.background;
-            this.ClientSize = new System.Drawing.Size(535, 371);
+            this.ClientSize = new System.Drawing.Size(474, 369);
             this.Controls.Add(this.lbl_instruction1);
             this.Controls.Add(this.lbl_instruction);
             this.Controls.Add(this.lbl_control);
@@ -111,6 +111,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "HelpWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Help";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.HelpWindow_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.HelpWindow_KeyUp);

@@ -13,6 +13,7 @@ namespace CYPVP
         public PictureBox SlimeSkin { get; set; }
         public string Direction { get; set; }
         public bool isCloseEnough { get; set; }
+        public int speed { get; set; }
         public Slime(PictureBox slimeskin)
         {
             SlimeSkin = slimeskin;
@@ -22,7 +23,7 @@ namespace CYPVP
        
         }
 
-        public void Move(int x, int y,int speed)
+        public void Move(int x, int y)
         {
             if (Math.Abs(SlimeSkin.Location.X - x) < 56 && Math.Abs(SlimeSkin.Location.Y - y) < 56)
             {

@@ -18,18 +18,34 @@ namespace CYPVP
         private Game Game { get; set; }
         private int Count { get; set; } = 0;
         public SoundPlayer sound { get; set; }
-        public List<String> List0fTips { get; set; } = new List<string>();
-
-
         
-        public GameWindow()
+        public List<String> List0fTips { get; set; } = new List<string>();
+    
+        public GameWindow(String Difficulty)
         {
             InitializeComponent();
             Game = new Game(this.Height, this.Width, Character, Slime);
+            SetUpDiffuculty(Difficulty);
             SetUpTimers(); 
             UpdateTime();
+            UpdateScore();
             GenerateTips();
             GiveTip();
+        }
+        private void SetUpDiffuculty(String Difficulty)
+        {
+            if (Difficulty == "Easy")
+            {
+                Game.Score = 10;
+                Game.MainSlime.speed = 2;
+            }
+            else
+            {
+                Game.Score = -10;
+                Game.MainSlime.speed = 9;
+                Game.SlimeRadiationPoints = 10;
+            }
+
         }
         private void SetUpTimers()
         {
@@ -244,7 +260,7 @@ namespace CYPVP
             }
             if(Game.MainSlime.isCloseEnough)
             {
-                Game.Score-=5;
+                Game.Score-=Game.SlimeRadiationPoints;
             }
             UpdateScore();
             UpdateTime();
@@ -283,6 +299,8 @@ namespace CYPVP
             }
             
         }
+
+        
     }
 }
 
