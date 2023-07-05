@@ -46,14 +46,14 @@ namespace CYPVP
             else
             {
                 Game.Score = -10;
-                Game.MainSlime.speed = 7;
+                Game.MainSlime.speed = 5;
                 Game.SlimeRadiationPoints = 10;
             }
 
         }
         private void SetUpTimers()
         {
-            StarsSpawn.Interval = 5000;
+            StarsSpawn.Interval = 4200;
             StarsSpawn.Start();
             CharacterMovements.Interval = 200;
             CharacterMovements.Start();
@@ -67,8 +67,7 @@ namespace CYPVP
             TipsTimer.Start();
             StarsFade.Interval = 12000;
             StarsFade.Start();
-            ChestTImer.Start();
-            ChestTImer.Interval = 5000;
+           
         }
         private void StopGame()
         {
@@ -112,6 +111,8 @@ namespace CYPVP
             List0fTips.Add("The radiation of the slime can hit you within 8cm");
             List0fTips.Add("Stars give you 10 points!");
             List0fTips.Add("You can pause the game  with ESC and unpause with F");
+            List0fTips.Add("If you answer incorrectly from the questions of the chest you lose -20 points");
+            List0fTips.Add("If you answer correctly from the questions of the chest you gain +10 points");
         }
 
         private void GameWindow_KeyDown(object sender, KeyEventArgs e)
@@ -171,6 +172,10 @@ namespace CYPVP
                     {
                         if (Game.Distance0f(Game.MainCharacter.CharacterSkin.Location, Game.Chest.ChestSkin.Location) < 50)
                         {
+                            Game.SoundPlayer = new SoundPlayer(Properties.Resources.chest_opening);
+                            Game.SoundPlayer.Play();
+                            Game.Chest.ChestSkin.Image = Properties.Resources.chest_open;
+                            lb_ChestAnoucment.Text = " ";
                             StopGame();
                             int random = CYPVP.Random.Next(0, Game.List0fQuestions.Count);
                             QuestionForm questionForm = new QuestionForm(Game.List0fQuestions[random].Text, Game.List0fQuestions[random].CorrectAnswer);
@@ -249,7 +254,8 @@ namespace CYPVP
             {
                 if (Game.List0fStars[i].IsEaten)
                 {
-                    Game.CollectCoinSound.Play();
+                    Game.SoundPlayer = new SoundPlayer(Properties.Resources.coin_collect);
+                    Game.SoundPlayer.Play();
                     Game.MainSlime.isCloseEnough = false;
                     this.Controls.Remove(Game.List0fStars[i].StarSkin);
                     Game.List0fStars.RemoveAt(i);
@@ -274,7 +280,9 @@ namespace CYPVP
             Game.MoveSlime();
             if (Game.MainSlime.isCloseEnough)
             {
-                SlimeRadiationSound.PlayLooping();
+               Game.SoundPlayer=new SoundPlayer(Properties.Resources.slime_radiation_sound);
+               Game.SoundPlayer.Play();
+
             }
             
             
@@ -284,6 +292,20 @@ namespace CYPVP
 
         private void ScorePoints_Tick(object sender, EventArgs e)
         {
+            if (Game.Time == 40)
+            {
+                PictureBox Chest = MakeChest();
+                while (Check(Chest) != true)
+                {
+                    Chest = MakeChest();
+                }
+                Game.Chest = new Chest(Chest);
+                this.Controls.Add(Chest);
+                Game.SoundPlayer = new SoundPlayer(Properties.Resources.chest_landing);
+                lb_ChestAnoucment.Text = "A chest has spawned, Press 'E' to open it! ";
+                Game.SoundPlayer.Play();
+                
+            }
             if (Game.Time % 20 == 0)
             {
 
@@ -380,7 +402,7 @@ namespace CYPVP
 
         private void StarsFade_Tick(object sender, EventArgs e)
         {
-            if (Game.List0fStars.Count > 1)
+            if (Game.List0fStars.Count > 2)
             {
                 Game.List0fStars[CYPVP.Random.Next(0, Game.List0fStars.Count)].isSelected = true;
                 RemoveStars();
@@ -414,18 +436,7 @@ namespace CYPVP
 
         }
 
-        private void ChestTImer_Tick(object sender, EventArgs e)
-        {
-            PictureBox Chest = MakeChest();
-            while (Check(Chest) != true)
-            {
-                Chest = MakeChest();
-            }
-            Game.Chest = new Chest(Chest);
-            this.Controls.Add(Chest);
-
-            ChestTImer.Stop();
-        }
+        
     }
 }
 

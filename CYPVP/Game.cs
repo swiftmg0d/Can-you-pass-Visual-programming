@@ -13,7 +13,7 @@ namespace CYPVP
     {
         public Character MainCharacter { get; set; }
         public List<Star> List0fStars { get; set; }=new List<Star>();
-        public SoundPlayer CollectCoinSound { get; set; }
+        public SoundPlayer SoundPlayer { get; set; }
         public int SlimeRadiationPoints { get; set; }
         public List<Question> List0fQuestions { get; set; }=new List<Question>();
         public  Slime MainSlime { get; set; }
@@ -24,14 +24,14 @@ namespace CYPVP
 
         public void LoadQuestions()
         {
-            List0fQuestions.Add(new Question("Can you write a class without specifying namespace?", "YES"));
-            List0fQuestions.Add(new Question("Does Move and LocationChanged, Resize and SizeChanged have the same functionality?", "YES"));
+            List0fQuestions.Add(new Question("Can you write a class without specifying namespace?", "Yes"));
+            List0fQuestions.Add(new Question("Does Move and LocationChanged, Resize and SizeChanged have the same functionality?", "Yes"));
         }
         public void SetUpGame()
         {
             Time = 79;
             Score = 0;
-            CollectCoinSound = new SoundPlayer(Properties.Resources.coin_collect);
+            SoundPlayer = new SoundPlayer(Properties.Resources.coin_collect);
             SlimeRadiationPoints = 5;
         }
         public Game(int height,int width,PictureBox mainCharacter,PictureBox mainSlime) {

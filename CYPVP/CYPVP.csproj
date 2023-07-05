@@ -284,5 +284,17 @@
   <ItemGroup>
     <None Include="Resources\output-onlinepngtools.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chest_landing.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chest_opening.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Correct Answer Sound Effect.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Incorrect sound effect.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -44,13 +44,12 @@
             this.lb_Paused = new System.Windows.Forms.Label();
             this.lb_Paused1 = new System.Windows.Forms.Label();
             this.SlimeRadiation = new System.Windows.Forms.Timer(this.components);
-            this.ChestTImer = new System.Windows.Forms.Timer(this.components);
+            this.lb_ChestAnoucment = new System.Windows.Forms.Label();
             this.Hud1 = new System.Windows.Forms.PictureBox();
             this.TimeLeftLabel = new System.Windows.Forms.PictureBox();
             this.Slime = new System.Windows.Forms.PictureBox();
             this.Character = new System.Windows.Forms.PictureBox();
             this.Hud = new System.Windows.Forms.PictureBox();
-            this.lb_ChestAnoucment = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Hud1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TimeLeftLabel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slime)).BeginInit();
@@ -155,10 +154,16 @@
             this.SlimeRadiation.Interval = 2000;
             this.SlimeRadiation.Tick += new System.EventHandler(this.SlimeRadiation_Tick);
             // 
-            // ChestTImer
+            // lb_ChestAnoucment
             // 
-            this.ChestTImer.Interval = 5000;
-            this.ChestTImer.Tick += new System.EventHandler(this.ChestTImer_Tick);
+            this.lb_ChestAnoucment.AutoSize = true;
+            this.lb_ChestAnoucment.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_ChestAnoucment.ForeColor = System.Drawing.Color.White;
+            this.lb_ChestAnoucment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lb_ChestAnoucment.Location = new System.Drawing.Point(546, 75);
+            this.lb_ChestAnoucment.Name = "lb_ChestAnoucment";
+            this.lb_ChestAnoucment.Size = new System.Drawing.Size(0, 19);
+            this.lb_ChestAnoucment.TabIndex = 11;
             // 
             // Hud1
             // 
@@ -209,17 +214,6 @@
             this.Hud.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Hud.TabIndex = 4;
             this.Hud.TabStop = false;
-            // 
-            // lb_ChestAnoucment
-            // 
-            this.lb_ChestAnoucment.AutoSize = true;
-            this.lb_ChestAnoucment.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_ChestAnoucment.ForeColor = System.Drawing.Color.White;
-            this.lb_ChestAnoucment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lb_ChestAnoucment.Location = new System.Drawing.Point(546, 75);
-            this.lb_ChestAnoucment.Name = "lb_ChestAnoucment";
-            this.lb_ChestAnoucment.Size = new System.Drawing.Size(0, 19);
-            this.lb_ChestAnoucment.TabIndex = 11;
             // 
             // GameWindow
             // 
@@ -280,7 +274,6 @@
         private System.Windows.Forms.Label lb_Paused;
         private System.Windows.Forms.Label lb_Paused1;
         private System.Windows.Forms.Timer SlimeRadiation;
-        private System.Windows.Forms.Timer ChestTImer;
         private System.Windows.Forms.Label lb_ChestAnoucment;
     }
 }

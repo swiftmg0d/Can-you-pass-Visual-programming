@@ -160,6 +160,15 @@ namespace CYPVP.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream chest_opening {
+            get {
+                return ResourceManager.GetStream("chest_opening", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap chest_unopen {
@@ -175,6 +184,15 @@ namespace CYPVP.Properties {
         public static System.IO.UnmanagedMemoryStream coin_collect {
             get {
                 return ResourceManager.GetStream("coin_collect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Correct_Answer_Sound_Effect {
+            get {
+                return ResourceManager.GetStream("Correct_Answer_Sound_Effect", resourceCulture);
             }
         }
         
@@ -204,6 +222,15 @@ namespace CYPVP.Properties {
         public static System.IO.UnmanagedMemoryStream Epic_Fail_Sound_Effect {
             get {
                 return ResourceManager.GetStream("Epic_Fail_Sound_Effect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Incorrect_sound_effect {
+            get {
+                return ResourceManager.GetStream("Incorrect_sound_effect", resourceCulture);
             }
         }
         
