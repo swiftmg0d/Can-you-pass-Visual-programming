@@ -160,7 +160,7 @@
             this.lb_ChestAnoucment.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_ChestAnoucment.ForeColor = System.Drawing.Color.White;
             this.lb_ChestAnoucment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lb_ChestAnoucment.Location = new System.Drawing.Point(186, 18);
+            this.lb_ChestAnoucment.Location = new System.Drawing.Point(186, 53);
             this.lb_ChestAnoucment.Name = "lb_ChestAnoucment";
             this.lb_ChestAnoucment.Size = new System.Drawing.Size(0, 19);
             this.lb_ChestAnoucment.TabIndex = 11;
