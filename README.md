@@ -62,8 +62,16 @@ Windows Forms Project од страна на Живче Глигоров, Там
 
 Текот на играта е осмислен во класа public class Game.
 
-<p align="center">
+<p align="center" height="375px" width="410px">
   <img src="./CYPVP/assets/ReadMe_images/class-game.jpg" /
 </p>
 
-<p style="font-size: 10px" align="center"> (Слика 5)</p>
+<p style="font-size: 10px" align="center"> (Слика 6)</p>
+
+1. Во неа е дефиниран објект од класата Character кој го претставува главниот карактер со кој играчот ќе собира поени. Во оваа класа се дефинирани вредности за движењата на карактерот.
+
+<p align="center" height="375px" width="410px">
+  <img src="./CYPVP/assets/ReadMe_images/character-class.jpg" /
+</p>
+
+<p style="font-size: 10px" align="center"> (Слика 7)</p>
