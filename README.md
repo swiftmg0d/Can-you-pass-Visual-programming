@@ -75,3 +75,45 @@ Windows Forms Project од страна на Живче Глигоров, Там
 </p>
 
 <p style="font-size: 10px" align="center"> (Слика 7)</p>
+
+Исто така во оваа класа на карактерот дефинирана е и функција која го контролира движењето на карактерот public void Move(String Position,int Speed,int Height,int Width,int x,int y). Во функцијата се испраќа String Position во зависност од тоа кое копче е стиснато. Поради можните 4 движења (горе, долу лево и десно) имаме 4 услови. Во упатството веќе видовме кои копчиња се користат за придвижување на карактерот, па така на пример ако е притиснато копчето "W", Position ќе има вредност "UP", ќе биде исполнет првиот услов и карактерот ќе се движи нагоре.
+
+<p align="center" height="375px" width="410px">
+  <img src="./CYPVP/assets/ReadMe_images/function-move.png" /
+</p>
+
+<p style="font-size: 10px" align="center"> (Слика 8)</p>
+
+
+2. Во класата Game има дефинирано и листа од објекти од класата public class Star кои претставуваат звездички што главниот карактер треба да ги собира за поени.
+
+<p align="center" height="375px" width="410px">
+  <img src="./CYPVP/assets/ReadMe_images/class-star.jpg" /
+</p>
+
+<p style="font-size: 10px" align="center"> (Слика 8)</p>
+
+3. Исто така имаме и листа од објекти од класа public class Question. Во оваа листа се прашањата кои носат бонус поени и се наоѓаат во мистериозна кутија која се појавува во текот на играта. Во оваа класа има дефинирано текст т.е прашањето (public String Text), точниот одговор на прашањето со кој ќе споредуваме дали играчот одговорил точно и заслужува бонус поени или неточно и треба да му се одземат поени (public String CorrectAnswer) и дефинирана е bool вредност која ни кажува дали прашањето е одговорено (public bool IsItAnswered).
+
+<p align="center" height="375px" width="410px">
+  <img src="./CYPVP/assets/ReadMe_images/question-class.png" /
+</p>
+
+<p style="font-size: 10px" align="center"> (Слика 9)</p>
+
+4. Класата Game содржи и објект кој го претставува противникот од класа public class Slime. Дефинирани се вредности за неговата насока, близината со карактерот и брзината со која се движи и е потребна за различните тежински нивоа.
+
+<p align="center" height="375px" width="410px">
+  <img src="./CYPVP/assets/ReadMe_images/slime-class.png" /
+</p>
+
+<p style="font-size: 10px" align="center"> (Слика 10)</p>
+
+5. Има integer вредности за поените (public int Score) и за времето (public int Time) кое истекува во текот на играта.
+   
+6. На крајот е дефинирана мистериозната кутија - објект од класа  public class Chest.
+<p align="center" height="375px" width="410px">
+  <img src="./CYPVP/assets/ReadMe_images/chest-class.png" /
+</p>
+
+<p style="font-size: 10px" align="center"> (Слика 10)</p>
