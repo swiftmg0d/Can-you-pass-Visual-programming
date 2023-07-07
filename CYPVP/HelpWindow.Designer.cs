@@ -42,7 +42,7 @@
             // lbl_heading
             // 
             this.lbl_heading.AutoSize = true;
-            this.lbl_heading.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lbl_heading.BackColor = System.Drawing.Color.Transparent;
             this.lbl_heading.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold);
             this.lbl_heading.ForeColor = System.Drawing.Color.White;
             this.lbl_heading.Location = new System.Drawing.Point(41, 9);
@@ -65,7 +65,7 @@
             // lbl_control
             // 
             this.lbl_control.AutoSize = true;
-            this.lbl_control.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lbl_control.BackColor = System.Drawing.Color.Transparent;
             this.lbl_control.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_control.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lbl_control.Location = new System.Drawing.Point(123, 147);
@@ -77,7 +77,7 @@
             // lbl_instruction
             // 
             this.lbl_instruction.AutoSize = true;
-            this.lbl_instruction.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lbl_instruction.BackColor = System.Drawing.Color.Transparent;
             this.lbl_instruction.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_instruction.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lbl_instruction.Location = new System.Drawing.Point(12, 321);
@@ -89,7 +89,7 @@
             // lbl_instruction1
             // 
             this.lbl_instruction1.AutoSize = true;
-            this.lbl_instruction1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lbl_instruction1.BackColor = System.Drawing.Color.Transparent;
             this.lbl_instruction1.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_instruction1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lbl_instruction1.Location = new System.Drawing.Point(25, 341);
@@ -101,7 +101,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Location = new System.Drawing.Point(123, 177);
@@ -113,7 +113,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label2.Location = new System.Drawing.Point(123, 209);
