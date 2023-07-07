@@ -7,7 +7,7 @@ Windows Forms Project од Живче Глигоров, Тамара Јосиф�
 
 ## Упатство за користење
 
-![image](https://github.com/Kocevav/ReadMeHelp/assets/100540007/f08d0961-4be6-41b9-9981-2ad04607ef71)
+![prva](./CYPVP/assets/ReadMe_images/prva.jpg)
 (слика 1)
 
 
