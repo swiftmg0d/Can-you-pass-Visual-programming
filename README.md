@@ -117,3 +117,5 @@ Windows Forms Project од страна на Живче Глигоров, Там
 </p>
 
 <p style="font-size: 10px" align="center"> (Слика 10)</p>
+
+Во самиот код на прозорецот за играта (public partial class GameWindow : Form) е дефинирана игра - објект од класата Game што ја опишавме и потребните функции кои ја водат играта.
