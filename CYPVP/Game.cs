@@ -20,10 +20,12 @@ namespace CYPVP
         public int Score { get; set; }
         public int Time { get; set; }
         public Chest Chest { get; set; }
-        
+        public int ChestTimeSpawn { get; set; }
+
         public Game(int height,int width,PictureBox mainCharacter,PictureBox mainSlime) {
             MainCharacter = new Character(mainCharacter);
-            MainSlime=new Slime(mainSlime);
+            MainSlime = new Slime(mainSlime);
+            ChestTimeSpawn = CYPVP.Random.Next(20, 60);
             SetUpGame();
             LoadQuestions();
         }

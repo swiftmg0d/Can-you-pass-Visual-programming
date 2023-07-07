@@ -296,7 +296,7 @@ namespace CYPVP
 
         private void ScorePoints_Tick(object sender, EventArgs e)
         {
-            if (Game.Time == 40)
+            if (Game.Time == Game.ChestTimeSpawn)
             {
                 PictureBox Chest = MakeChest();
                 while (Check(Chest) != true)
@@ -427,10 +427,7 @@ namespace CYPVP
             
         }
 
-        private void GameWindow_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
 
