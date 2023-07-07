@@ -8,7 +8,9 @@ Windows Forms Project од страна на Живче Глигоров, Там
 ## Упатство за користење
 
 
-<p align="center"<img src="./CYPVP/assets/ReadMe_images/start_menu.png" style="display: block; margin: auto" ></p>
+<p align="center">
+  <img src="./CYPVP/assets/ReadMe_images/start_menu.png" /
+</p>
 
 <p align="center" style="font-size: 10px"> (Слика 1)</p>
 
@@ -18,7 +20,9 @@ Windows Forms Project од страна на Живче Глигоров, Там
 
 
 
-<p align="center"<img src="./CYPVP/assets/ReadMe_images/help_menu.png" style="display: block; margin: auto" ></p>
+<p align="center">
+  <img src="./CYPVP/assets/ReadMe_images/help_menu.png" /
+</p>
 <p align="center" style="font-size: 10px"> (Слика 2)</p>
 
 Во Help е обајаснето начинот на движење на карактерот во играта.
@@ -28,13 +32,19 @@ Windows Forms Project од страна на Живче Глигоров, Там
 Со стартување на играта се прикажува прозорец каде можеме да избереме ниво AIT и нивото CS.
 
 
-<p align="center" <img src="./CYPVP/assets/ReadMe_images/class_menu.png"></p>
+<p align="center">
+  <img src="./CYPVP/assets/ReadMe_images/class_menu.png" /
+</p>
 <p align="center" style="font-size: 10px"> (Слика 3)</p>
 
 
-<p align="center" <img src="./CYPVP/assets/ReadMe_images/game_window.png" style="display: block; margin: auto"></p>
+<p align="center">
+  <img src="./CYPVP/assets/ReadMe_images/game_window.png" /
+</p>
 <p align="center" style="font-size: 10px"> (Слика 4)</p>
-<p align="center" <img src="./CYPVP/assets/ReadMe_images/chest.png" style="display: block; margin: auto"></p>
+<p align="center">
+  <img src="./CYPVP/assets/ReadMe_images/chest.png" /
+</p>
 
 <p style="font-size: 10px" align="center"> (Слика 5)</p>
 
