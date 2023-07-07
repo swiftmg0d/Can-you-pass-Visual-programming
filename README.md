@@ -7,8 +7,8 @@ Windows Forms Project од страна на Живче Глигоров, Там
 
 ## Упатство за користење
 
-<img src="./CYPVP/assets/ReadMe_images/start_menu.png" style="display: block; margin: auto" >
 
+<p align="center"<img src="./CYPVP/assets/ReadMe_images/start_menu.png" style="display: block; margin: auto" ></p>
 
 <p align="center" style="font-size: 10px"> (Слика 1)</p>
 
@@ -17,8 +17,8 @@ Windows Forms Project од страна на Живче Глигоров, Там
 ### Help
 
 
-  <img src="./CYPVP/assets/ReadMe_images/help_menu.png" style="display: block; margin: auto" >
 
+<p align="center"<img src="./CYPVP/assets/ReadMe_images/help_menu.png" style="display: block; margin: auto" ></p>
 <p align="center" style="font-size: 10px"> (Слика 2)</p>
 
 Во Help е обајаснето начинот на движење на карактерот во играта.
@@ -27,12 +27,15 @@ Windows Forms Project од страна на Живче Глигоров, Там
 
 Со стартување на играта се прикажува прозорец каде можеме да избереме ниво AIT и нивото CS.
 
-  <img src="./CYPVP/assets/ReadMe_images/class_menu.png" style="display: block; margin: auto">
+
+<p align="center" <img src="./CYPVP/assets/ReadMe_images/class_menu.png"></p>
 <p align="center" style="font-size: 10px"> (Слика 3)</p>
 
-<img src="./CYPVP/assets/ReadMe_images/game_window.png" style="display: block; margin: auto">
+
+<p align="center" <img src="./CYPVP/assets/ReadMe_images/game_window.png" style="display: block; margin: auto"></p>
 <p align="center" style="font-size: 10px"> (Слика 4)</p>
-<img src="./CYPVP/assets/ReadMe_images/chest.png" style="display: block; margin: auto">
+<p align="center" <img src="./CYPVP/assets/ReadMe_images/chest.png" style="display: block; margin: auto"></p>
+
 <p style="font-size: 10px" align="center"> (Слика 5)</p>
 
 
@@ -40,6 +43,5 @@ Windows Forms Project од страна на Живче Глигоров, Там
 
 Ниво CS започнува со  почетни -10 поени, во ова ниво целта е да се соберат поени и да избегнете вашето побрзо противничко лице кое воспротивно ги намалува поените. Исто така, има можност да се освојат бонус поени со точно одговорени прашања поврзани со визуелно програмирање кои исто така се сместени во мистеризната кутија. Ова ќе помогне да се добие дополнителни поени и да ги подобрите вашите вештини во играта.
 
-Целта на играта е да се избегне slime-от кој доколку е во непосредна близина ве заразува со негововата радијација со кој губите одредени
-поени од зависност од нивото што сте го избрале. За да престанат да се губат поените и да се излечи човечето од радијацијата на slime-от потребно е да се собере една звездичка.
-
+Целта на играта е да се избегне slime-от кој доколку е во непосредна близина ве заразува со негововата радијација, ефектот на радијација предизвикува поените да играчот да се намалуваат постепено од зависност кое ниво е одберено.
+За да престанат да се намалуваат поените и да се излечи играчот од радијацијата на slime-от потребно е да се собере една звездичка.
