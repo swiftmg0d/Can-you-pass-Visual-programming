@@ -1,121 +1,109 @@
-# Can-you-pass-Visual-programming
-Windows Forms Project од страна на Живче Глигоров, Тамара Јосифовска и Верoника Коцева.
 
 
-## Опис на апликацијата
-Апликацијата која ја развивамe е игра која се состои од  два карактери, првиот карактер е главна улога, која цели да собере што е можно повеќе поени, додека вториот карактер е противник, кој ќе се обидува да ги намали бројот на поени.Играта вклучува две нивоа: нивото AIT и нивото CS. Нивото AIT е почетното ниво и е дизајнирано за полесно искуство на играње, додека нивото AIT е понапредно кое претставува предизвик за играчите кои бараат повеќе предизвици и брзина.
+# Can-you-pass-Visual-programming  
+Windows Forms Project by Zhivche Gligorov, Tamara Josifovska, and Veronika Koceva.
 
-## Упатство за користење
+## Application Description  
+The application we are developing is a game consisting of two characters. The first character is the protagonist, whose goal is to collect as many points as possible, while the second character is the opponent, who will try to reduce the number of points. The game includes two levels: the AIT level and the CS level. The AIT level is the beginner level, designed for an easier gaming experience, while the CS level is more advanced, presenting a challenge for players who seek more challenges and speed.
 
+## User Guide  
 
-<p align="center">
-  <img src="./CYPVP/assets/ReadMe_images/start_menu.png" /
-</p>
+<p align="center">  
+  <img src="./CYPVP/assets/ReadMe_images/start_menu.png" />  
+</p>  
+<p align="center" style="font-size: 10px"> (Image 1)</p>
 
-<p align="center" style="font-size: 10px"> (Слика 1)</p>
+On the startup window <span style="font-size: 10px"> (Image 1)</span>, when starting the game, you can choose to start the game (Start), view the game instructions (Help), or quit the game (Quit).
 
-На почетниот прозорец <span style="font-size: 10px"> (Слика 1)</span> при стартување на играта имаме можност да започнеме со играта (Start), да ги погледнеме инструкциите за играта  (Help) и доколку сакаме да завршиме со играта(Quit).
+### Help  
 
-### Help
+<p align="center">  
+  <img src="./CYPVP/assets/ReadMe_images/help_menu.png" />  
+</p>  
+<p align="center" style="font-size: 10px"> (Image 2)</p>
 
+In the Help section, the character's movement in the game is explained.
 
+### Start (Start)  
 
-<p align="center">
-  <img src="./CYPVP/assets/ReadMe_images/help_menu.png" /
-</p>
-<p align="center" style="font-size: 10px"> (Слика 2)</p>
+When the game starts, a window appears where you can choose between the AIT and CS levels.
 
-Во Help е обајаснето начинот на движење на карактерот во играта.
+<p align="center">  
+  <img src="./CYPVP/assets/ReadMe_images/class_menu.png" />  
+</p>  
+<p align="center" style="font-size: 10px"> (Image 3)</p>
 
-### Старт (Start)
+<p align="center">  
+  <img src="./CYPVP/assets/ReadMe_images/game_window.png" />  
+</p>  
+<p align="center" style="font-size: 10px"> (Image 4)</p>  
 
-Со стартување на играта се прикажува прозорец каде можеме да избереме ниво AIT и нивото CS.
+<p align="center">  
+  <img src="./CYPVP/assets/ReadMe_images/chest.png" />  
+</p>  
+<p style="font-size: 10px" align="center"> (Image 5)</p>
 
+The AIT level is the first level of the game and is designed to be easier. This level starts with an initial score of 10 points, and with each collected star, the points increase. Bonus points are awarded for each correctly answered question related to visual programming, which is located in a mysterious box <span style="font-size: 10px"> (Image 5)</span>. Additionally, the goal is to avoid the opponent, who moves slower in this level. If you fail, points are deducted.
 
-<p align="center">
-  <img src="./CYPVP/assets/ReadMe_images/class_menu.png" /
-</p>
-<p align="center" style="font-size: 10px"> (Слика 3)</p>
+The CS level starts with -10 points. In this level, the goal is to collect points while avoiding your faster opponent, who will try to reduce your points. Bonus points can also be earned by answering questions related to visual programming, located in the mysterious box. This helps earn additional points and improve your skills in the game.
 
+The objective of the game is to avoid the slime, which, if close to you, infects you with its radiation. The effect of radiation causes your points to gradually decrease depending on the selected level.  
+To stop the points from decreasing and heal from the slime's radiation, you must collect a star.
 
-<p align="center">
-  <img src="./CYPVP/assets/ReadMe_images/game_window.png" /
-</p>
-<p align="center" style="font-size: 10px"> (Слика 4)</p>
-<p align="center">
-  <img src="./CYPVP/assets/ReadMe_images/chest.png" /
-</p>
+## Solution to the Problem  
 
-<p style="font-size: 10px" align="center"> (Слика 5)</p>
+### Data Structures  
 
+The flow of the game is designed in the class `public class Game`.
 
-Нивото AIT е првото ниво во играта и е дизајнирано да биде полесно. Ова ниво, се започнува со почетни 10 поени и со секоја собрана ѕвездичка поените се зголемуваат, а бонус поени добивате со секое точно одговорено прашање поврзано со визуелно програмирање кое е сместени во мистериозна кутија <span style="font-size: 10px"> (Слика 5)</span>. Воедно, целта е да се избегне противникот, кој се движи побавно во ова ниво доколку не успеете ви се одземмат поени.
+<p align="center" height="375px" width="410px">  
+  <img src="./CYPVP/assets/ReadMe_images/class-game.jpg" />  
+</p>  
+<p style="font-size: 10px" align="center"> (Image 6)</p>
 
-Ниво CS започнува со  почетни -10 поени, во ова ниво целта е да се соберат поени и да избегнете вашето побрзо противничко лице кое воспротивно ги намалува поените. Исто така, има можност да се освојат бонус поени со точно одговорени прашања поврзани со визуелно програмирање кои исто така се сместени во мистеризната кутија. Ова ќе помогне да се добие дополнителни поени и да ги подобрите вашите вештини во играта.
+1. In this class, an object of the `Character` class is defined, which represents the main character that the player uses to collect points. This class defines the movement values for the character.
 
-Целта на играта е да се избегне slime-от кој доколку е во непосредна близина ве заразува со негововата радијација, ефектот на радијација предизвикува поените на играчот да се намалуваат постепено од зависност кое ниво е одберено.
-За да престанат да се намалуваат поените и да се излечи играчот од радијацијата на slime-от потребно е да се собере една звездичка.
+<p align="center" height="375px" width="410px">  
+  <img src="./CYPVP/assets/ReadMe_images/character-class.jpg" />  
+</p>  
+<p style="font-size: 10px" align="center"> (Image 7)</p>
 
-## Решение на проблемот
+The character class also defines a function that controls the character's movement: `public void Move(String Position, int Speed, int Height, int Width, int x, int y)`. The function receives a `String Position` depending on the pressed key. Due to the possible four movements (up, down, left, and right), there are four conditions. In the instructions, we saw which keys are used to move the character, so for example, if the "W" key is pressed, the Position will be "UP," triggering the first condition and moving the character upward.
 
-### Податочни структури
+<p align="center" height="375px" width="410px">  
+  <img src="./CYPVP/assets/ReadMe_images/function-move.png" />  
+</p>  
+<p style="font-size: 10px" align="center"> (Image 8)</p>
 
-Текот на играта е осмислен во класа public class Game.
+2. In the `Game` class, there is a list of objects from the `public class Star`, which represents the stars the main character needs to collect for points.
 
-<p align="center" height="375px" width="410px">
-  <img src="./CYPVP/assets/ReadMe_images/class-game.jpg" /
-</p>
+<p align="center" height="375px" width="410px">  
+  <img src="./CYPVP/assets/ReadMe_images/class-star.png" />  
+</p>  
+<p style="font-size: 10px" align="center"> (Image 9)</p>
 
-<p style="font-size: 10px" align="center"> (Слика 6)</p>
+3. There is also a list of objects from the `public class Question`. In this list, there are questions that award bonus points and appear in a mysterious box during the game. This class defines the text (the question), the correct answer, and a `bool` value that indicates if the question has been answered.
 
-1. Во неа е дефиниран објект од класата Character кој го претставува главниот карактер со кој играчот ќе собира поени. Во оваа класа се дефинирани вредности за движењата на карактерот.
+<p align="center" height="375px" width="410px">  
+  <img src="./CYPVP/assets/ReadMe_images/question-class.png" />  
+</p>  
+<p style="font-size: 10px" align="center"> (Image 10)</p>
 
-<p align="center" height="375px" width="410px">
-  <img src="./CYPVP/assets/ReadMe_images/character-class.jpg" /
-</p>
+4. The `Game` class also contains an object representing the opponent from the `public class Slime`. It defines values for its direction, proximity to the character, and the speed at which it moves, which is required for different difficulty levels.
 
-<p style="font-size: 10px" align="center"> (Слика 7)</p>
+<p align="center" height="375px" width="410px">  
+  <img src="./CYPVP/assets/ReadMe_images/slime-class.png" />  
+</p>  
+<p style="font-size: 10px" align="center"> (Image 11)</p>
 
-Исто така во оваа класа на карактерот дефинирана е и функција која го контролира движењето на карактерот public void Move(String Position,int Speed,int Height,int Width,int x,int y). Во функцијата се испраќа String Position во зависност од тоа кое копче е стиснато. Поради можните 4 движења (горе, долу лево и десно) имаме 4 услови. Во упатството веќе видовме кои копчиња се користат за придвижување на карактерот, па така на пример ако е притиснато копчето "W", Position ќе има вредност "UP", ќе биде исполнет првиот услов и карактерот ќе се движи нагоре.
+5. There are integer values for the score (`public int Score`) and for the time (`public int Time`) that passes during the game.
 
-<p align="center" height="375px" width="410px">
-  <img src="./CYPVP/assets/ReadMe_images/function-move.png" /
-</p>
+6. Lastly, the mysterious box is defined as an object from the `public class Chest`.
 
-<p style="font-size: 10px" align="center"> (Слика 8)</p>
+<p align="center" height="375px" width="410px">  
+  <img src="./CYPVP/assets/ReadMe_images/chest-class.png" />  
+</p>  
+<p style="font-size: 10px" align="center"> (Image 12)</p>
 
+In the game window code (`public partial class GameWindow : Form`), an object of the `Game` class is defined, along with the necessary functions to manage the game.
 
-2. Во класата Game има дефинирано и листа од објекти од класата public class Star кои претставуваат звездички што главниот карактер треба да ги собира за поени.
-
-<p align="center" height="375px" width="410px">
-  <img src="./CYPVP/assets/ReadMe_images/class-star.png" /
-</p>
-
-<p style="font-size: 10px" align="center"> (Слика 9)</p>
-
-3. Исто така имаме и листа од објекти од класа public class Question. Во оваа листа се прашањата кои носат бонус поени и се наоѓаат во мистериозна кутија која се појавува во текот на играта. Во оваа класа има дефинирано текст т.е прашањето (public String Text), точниот одговор на прашањето со кој ќе споредуваме дали играчот одговорил точно и заслужува бонус поени или неточно и треба да му се одземат поени (public String CorrectAnswer) и дефинирана е bool вредност која ни кажува дали прашањето е одговорено (public bool IsItAnswered).
-
-<p align="center" height="375px" width="410px">
-  <img src="./CYPVP/assets/ReadMe_images/question-class.png" /
-</p>
-
-<p style="font-size: 10px" align="center"> (Слика 10)</p>
-
-4. Класата Game содржи и објект кој го претставува противникот од класа public class Slime. Дефинирани се вредности за неговата насока, близината со карактерот и брзината со која се движи и е потребна за различните тежински нивоа.
-
-<p align="center" height="375px" width="410px">
-  <img src="./CYPVP/assets/ReadMe_images/slime-class.png" /
-</p>
-
-<p style="font-size: 10px" align="center"> (Слика 11)</p>
-
-5. Има integer вредности за поените (public int Score) и за времето (public int Time) кое истекува во текот на играта.
-   
-6. На крајот е дефинирана мистериозната кутија - објект од класа  public class Chest.
-<p align="center" height="375px" width="410px">
-  <img src="./CYPVP/assets/ReadMe_images/chest-class.png" /
-</p>
-
-<p style="font-size: 10px" align="center"> (Слика 12)</p>
-
-Во самиот код на прозорецот за играта (public partial class GameWindow : Form) е дефинирана игра - објект од класата Game што ја опишавме и потребните функции кои ја водат играта.
